@@ -1,22 +1,17 @@
-import styles from './page.module.css'
-import Header from '@/Components/footer/page'
-import Footer from '@/Components/footer/page' 
+import "./global.scss";
+import Header from "@/components/header/Header";
+import Footer from "@/components/footer/Footer";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className='wrapper'>
-        <Header />
-        <section className='banner-services'>
-          <div className='banner'>
-            
-          </div>
-          <div className='services'>
-            
-          </div>
-        </section>
-        <Footer />
-      </div>
+    <main>
+      <section className="banner">
+        <div className="wrapper">
+          <Header />
+        </div>
+      </section>
+
+      <Footer />
     </main>
-  )
+  );
 }
