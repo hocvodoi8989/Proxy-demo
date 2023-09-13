@@ -1,4 +1,5 @@
-import { Lexend_Deca } from 'next/font/google'
+import { Lexend_Deca } from 'next/font/google';
+import "./global.scss";
 
 const LexendDeca = Lexend_Deca({ subsets: ['latin'] })
 

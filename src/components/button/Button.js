@@ -15,14 +15,14 @@ function Button({ to, href, children, onClick, ...passProps }) {
         props.href = href;
     }
 
-    // const classes = ('btn', {
+    // const classes = ("btn", {
     //     signup,
     //     download,
     //     learnMore,
     // });
 
     return (
-        <Comp>
+        <Comp {...props}>
             <span>{children}</span>
         </Comp>
     );

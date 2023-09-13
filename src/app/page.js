@@ -1,17 +1,11 @@
-import "./global.scss";
-import Header from "@/components/header/Header";
-import Footer from "@/components/footer/Footer";
 
-export default function Home() {
+import HomePage from "./layouts/homePage/page";
+
+export default function Home( { children }) {
   return (
-    <main>
-      <section className="banner">
-        <div className="wrapper">
-          <Header />
-        </div>
-      </section>
-
-      <Footer />
-    </main>
+    <HomePage>
+      <div>{children}</div>
+    </HomePage>
+    
   );
 }
