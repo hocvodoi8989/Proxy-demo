@@ -51,10 +51,11 @@ function Header() {
         <Link href="#">
           <Image
             className="header__menu-logo"
-            src="/assets/images/logo.png"
+            src="/assets/images/logo.webp"
             alt="logo"
             width={118}
             height={35}
+            quality={100}
           />
         </Link>
         <div className="header__menu-action">
