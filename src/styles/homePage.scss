@@ -683,6 +683,7 @@
                 color: #797e89;
                 font-size: 14px;
                 font-weight: 400;
+                cursor: pointer;
               }
 
               div {
@@ -703,6 +704,7 @@
               display: flex;
               align-items: center;
               height: 34px;
+              // display: none;
 
               input {
                 width: 180px;
@@ -713,8 +715,8 @@
                 color: #A2A7AE;
               }
 
-              input:valid {
-                background-color: red;
+              input:not(:placeholder-shown) ~ &-btn {
+                background-color: #2d85f3;
               }
 
               button {
