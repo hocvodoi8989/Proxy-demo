@@ -311,7 +311,7 @@ function HomePage() {
                 />
               </svg>
               <div className="banner__list-item-text">
-                <span className="banner__list-item-text-big">99.99%%</span>
+                <span className="banner__list-item-text-big">99.99%</span>
                 <span className="banner__list-item-text-small">
                   Network uptime
                 </span>
