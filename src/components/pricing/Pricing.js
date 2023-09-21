@@ -1,9 +1,9 @@
 "use client";
 
-import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
+import { faCircleCheck, faL } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 function Pricing() {
   const [showCode, setShowCode] = useState(false);
@@ -12,20 +12,44 @@ function Pricing() {
 
   const [valueCode, setValueCode] = useState("");
 
-  const [showCheck, setShowCheck] = useState(false);
+  const [scroll, setScroll] = useState("gilder-popular");
 
-  const [unCheck, setUnCheck] = useState(false);
+  const [tag1, setTag1] = useState(true);
+  const [tag2, setTag2] = useState(false);
+  const [tag3, setTag3] = useState(false);
 
-  const [scroll, setScroll] = useState("gilder-popular")
+  const [price, setPrice] = useState("$75.00");
 
-  const codeRef = useRef();
+  const [check1, setCheck1] = useState(false);
+  const [check2, setCheck2] = useState(false);
+  const [check3, setCheck3] = useState(true);
+  const [check4, setCheck4] = useState(false);
+  const [check5, setCheck5] = useState(false);
 
-  
+  const [contact, setContact] = useState(true);
+
+  const [disable, setDisable] = useState(false);
+
+  const chooseTag1 = () => {
+    setTag1(true);
+    setTag2(false);
+    setTag3(false);
+  };
+
+  const chooseTag2 = () => {
+    setTag1(false);
+    setTag2(true);
+    setTag3(false);
+  };
+
+  const chooseTag3 = () => {
+    setTag1(false);
+    setTag2(false);
+    setTag3(true);
+  };
 
   const handleShowcode = () => {
     setValueCode("");
-    // codeRef.current.focus()
-
     setShowCode(true);
     setCloseCode(true);
   };
@@ -39,30 +63,86 @@ function Pricing() {
     console.log(valueCode);
   };
 
-  const check = () => {
-    setUnCheck(true)
-    setShowCheck(true)
-  }
-
-  const closeCheck = () => {
-    setShowCheck(false)
-    setUnCheck(false)
-  };
-
-  
-
   const active = (e) => {
-    const text = e.target.innerText
+    const text = e.target.innerText;
 
     if (text === "Popular Plan") {
-      setScroll("gilder-popular")
+      setScroll("gilder-popular");
     } else if (text === "Static IP Plan") {
-      setScroll("gilder-static")
+      setScroll("gilder-static");
     } else if (text === "Dedicated Static Proxies") {
-      setScroll("gilder-dedicated")
+      setScroll("gilder-dedicated");
     }
-  }
+  };
 
+  const active1 = (e) => {
+    active(e);
+    chooseTag1();
+  };
+
+  const active2 = (e) => {
+    active(e);
+    chooseTag2();
+  };
+
+  const active3 = (e) => {
+    active(e);
+    chooseTag3();
+  };
+
+  const option1 = () => {
+    setPrice("$48.00");
+    setCheck1(true);
+    setCheck2(false);
+    setCheck3(false);
+    setCheck4(false);
+    setCheck5(false);
+    setContact(true);
+    setDisable(false);
+  };
+
+  const option2 = () => {
+    setPrice("$50.00");
+    setCheck1(false);
+    setCheck2(true);
+    setCheck3(false);
+    setCheck4(false);
+    setCheck5(false);
+    setContact(true);
+    setDisable(false);
+  };
+
+  const option3 = () => {
+    setPrice("$75.00");
+    setCheck1(false);
+    setCheck2(false);
+    setCheck3(true);
+    setCheck4(false);
+    setCheck5(false);
+    setContact(true);
+    setDisable(false);
+  };
+
+  const option4 = () => {
+    setPrice("$200.00");
+    setCheck1(false);
+    setCheck2(false);
+    setCheck3(false);
+    setCheck4(true);
+    setCheck5(false);
+    setContact(true);
+    setDisable(false);
+  };
+
+  const option5 = () => {
+    setCheck1(false);
+    setCheck2(false);
+    setCheck3(false);
+    setCheck4(false);
+    setCheck5(true);
+    setContact(false);
+    setDisable(true);
+  };
 
   return (
     <section className="pricing">
@@ -72,7 +152,10 @@ function Pricing() {
           <div className="pricing__table-interest">
             <div className="pricing__table-interest-info">
               <div className="pricing__table-interest-info-tab">
-                <div className="pricing__table-interest-info-tab-popular" onClick={active} >
+                <div
+                  className="pricing__table-interest-info-tab-popular"
+                  onClick={active1}
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="23"
@@ -93,18 +176,24 @@ function Pricing() {
                   </svg>
                   <span>Popular Plan</span>
                 </div>
-                <div className="pricing__table-interest-info-tab-static" onClick={active}>
+                <div
+                  className="pricing__table-interest-info-tab-static"
+                  onClick={active2}
+                >
                   <span>Static IP Plan</span>
                 </div>
-                <div className="pricing__table-interest-info-tab-dedicated" onClick={active}>
+                <div
+                  className="pricing__table-interest-info-tab-dedicated"
+                  onClick={active3}
+                >
                   <span>Dedicated Static Proxies</span>
                 </div>
-                <div className={`pricing__table-interest-info-tab-effect ${scroll}`}>
-                  
-                </div>
+                <div
+                  className={`pricing__table-interest-info-tab-effect ${scroll}`}
+                ></div>
               </div>
               <div className="pricing__table-interest-info-detail">
-                <ul>
+                <ul className={tag1 ? "show" : "hide"}>
                   <li>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -285,51 +374,58 @@ function Pricing() {
                 <div className="pricing__table-interest-pay-wrap-title">
                   <div className="pricing__table-interest-pay-wrap-title-money">
                     <p>You need pay:</p>
-                    <div>$0.00</div>
+                    <div className={disable ? "disable" : ""}>{price}</div>
                   </div>
-                  <div>
-                  <p
-                    onClick={handleShowcode}
-                    className={showCode ? "hidden" : "showed"}
-                  >
-                    Have a Coupon code?
-                  </p>
-                  <div
-                    className={`pricing__table-interest-pay-wrap-title-coupon ${
-                      closeCode ? "showed" : "hidden"
-                    }`}
-                  >
-                    <input
-                      ref={codeRef}
-                      placeholder="Add coupon code here"
-                      onChange={(e) => setValueCode(e.target.value)}
-                      value={valueCode}
-                    />
-                    <button
-                      onClick={sendCode}
-                      className="pricing__table-interest-pay-wrap-title-coupon-btn"
+                  <div className="pricing__table-interest-pay-wrap-title-code">
+                    <p
+                      onClick={handleShowcode}
+                      className={`${showCode ? "hidden" : "showed"} ${
+                        disable ? "disable" : ""
+                      }`}
                     >
-                      Apply
-                    </button>
-                    <svg
-                      onClick={handleCloseCode}
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="10"
-                      height="10"
-                      viewBox="0 0 10 10"
-                      fill="none"
+                      Have a Coupon code?
+                    </p>
+                    <div
+                      className={`pricing__table-interest-pay-wrap-title-coupon ${
+                        closeCode ? "showed" : "hidden"
+                      }`}
                     >
-                      <path
-                        d="M5.91627 5.00007L9.81015 1.10608C10.0636 0.852787 10.0636 0.443255 9.81015 0.189966C9.55686 -0.0633221 9.14733 -0.0633221 8.89404 0.189966L5.00004 4.08396L1.10616 0.189966C0.852758 -0.0633221 0.443344 -0.0633221 0.190055 0.189966C-0.0633518 0.443255 -0.0633518 0.852787 0.190055 1.10608L4.08394 5.00007L0.190055 8.89407C-0.0633518 9.14736 -0.0633518 9.55689 0.190055 9.81018C0.316284 9.93653 0.482256 10 0.64811 10C0.813963 10 0.979817 9.93653 1.10616 9.81018L5.00004 5.91618L8.89404 9.81018C9.02039 9.93653 9.18624 10 9.3521 10C9.51795 10 9.6838 9.93653 9.81015 9.81018C10.0636 9.55689 10.0636 9.14736 9.81015 8.89407L5.91627 5.00007Z"
-                        fill="#112446"
+                      <input
+                        placeholder="Add coupon code here"
+                        onChange={(e) => setValueCode(e.target.value)}
+                        value={valueCode}
                       />
-                    </svg>
+                      <button
+                        onClick={sendCode}
+                        className="pricing__table-interest-pay-wrap-title-coupon-btn"
+                      >
+                        Apply
+                      </button>
+                      <svg
+                        onClick={handleCloseCode}
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="10"
+                        height="10"
+                        viewBox="0 0 10 10"
+                        fill="none"
+                      >
+                        <path
+                          d="M5.91627 5.00007L9.81015 1.10608C10.0636 0.852787 10.0636 0.443255 9.81015 0.189966C9.55686 -0.0633221 9.14733 -0.0633221 8.89404 0.189966L5.00004 4.08396L1.10616 0.189966C0.852758 -0.0633221 0.443344 -0.0633221 0.190055 0.189966C-0.0633518 0.443255 -0.0633518 0.852787 0.190055 1.10608L4.08394 5.00007L0.190055 8.89407C-0.0633518 9.14736 -0.0633518 9.55689 0.190055 9.81018C0.316284 9.93653 0.482256 10 0.64811 10C0.813963 10 0.979817 9.93653 1.10616 9.81018L5.00004 5.91618L8.89404 9.81018C9.02039 9.93653 9.18624 10 9.3521 10C9.51795 10 9.6838 9.93653 9.81015 9.81018C10.0636 9.55689 10.0636 9.14736 9.81015 8.89407L5.91627 5.00007Z"
+                          fill="#112446"
+                        />
+                      </svg>
+                    </div>
                   </div>
-                  </div>
-                  
                 </div>
                 <div className="pricing__table-interest-pay-wrap-buy">
-                  <button>Buy Now</button>
+                  <button className={disable ? "disable-btn" : ""}>
+                    <Link
+                      href="#"
+                      className="pricing__table-interest-pay-wrap-buy-btn"
+                    >
+                      Buy Now
+                    </Link>
+                  </button>
                   <div className="pricing__table-interest-pay-wrap-buy-method">
                     <Link href="#">
                       <svg
@@ -620,15 +716,17 @@ function Pricing() {
               <div className="pricing__table-option-item-price">
                 <div className="pricing__table-option-item-price-wrap">
                   <FontAwesomeIcon
-                    onClick={closeCheck}
-                    className={`pricing__table-option-item-price-wrap-check ${showCheck ? "show" : "hide"}`}
+                    onClick={option1}
+                    className={`pricing__table-option-item-price-wrap-check ${
+                      check1 ? "show" : "hide"
+                    }`}
                     icon={faCircleCheck}
                     width="17"
                     height="16"
                   />
                   <svg
-                    onClick={check}
-                    className={unCheck ? "hide" : "show"}
+                    onClick={option1}
+                    className={check1 ? "hide" : "show"}
                     xmlns="http://www.w3.org/2000/svg"
                     width="17"
                     height="16"
@@ -666,12 +764,17 @@ function Pricing() {
               <div className="pricing__table-option-item-price">
                 <div className="pricing__table-option-item-price-wrap">
                   <FontAwesomeIcon
-                    className={"pricing__table-option-item-price-wrap-check"}
+                    onClick={option2}
+                    className={`pricing__table-option-item-price-wrap-check ${
+                      check2 ? "show" : "hide"
+                    }`}
                     icon={faCircleCheck}
                     width="17"
                     height="16"
                   />
                   <svg
+                    onClick={option2}
+                    className={check2 ? "hide" : "show"}
                     xmlns="http://www.w3.org/2000/svg"
                     width="17"
                     height="16"
@@ -701,7 +804,7 @@ function Pricing() {
               <div className="pricing__table-option-item-total">
                 <div className="pricing__table-option-item-total-wrap">
                   <p>Total</p>
-                  <div>$75.00</div>
+                  <div>$50.00</div>
                 </div>
               </div>
             </div>
@@ -709,13 +812,19 @@ function Pricing() {
               <div className="pricing__table-option-special-price">
                 <div className="pricing__table-option-special-price-wrap">
                   <FontAwesomeIcon
-                    className={"pricing__table-option-item-price-wrap-check"}
+                    onClick={option3}
+                    className={`pricing__table-option-item-price-wrap-check ${
+                      check3 ? "show" : "hide"
+                    }`}
                     icon={faCircleCheck}
                     width="17"
                     height="16"
                     style={{ color: "#112446" }}
                   />
+
                   <svg
+                    onClick={option3}
+                    className={check3 ? "hide" : "show"}
                     xmlns="http://www.w3.org/2000/svg"
                     width="17"
                     height="16"
@@ -794,12 +903,17 @@ function Pricing() {
               <div className="pricing__table-option-item-price">
                 <div className="pricing__table-option-item-price-wrap">
                   <FontAwesomeIcon
-                    className={"pricing__table-option-item-price-wrap-check"}
+                    onClick={option4}
+                    className={`pricing__table-option-item-price-wrap-check ${
+                      check4 ? "show" : "hide"
+                    }`}
                     icon={faCircleCheck}
                     width="17"
                     height="16"
                   />
                   <svg
+                    onClick={option4}
+                    className={check4 ? "hide" : "show"}
                     xmlns="http://www.w3.org/2000/svg"
                     width="17"
                     height="16"
@@ -837,12 +951,17 @@ function Pricing() {
               <div className="pricing__table-option-item-price">
                 <div className="pricing__table-option-item-price-wrap">
                   <FontAwesomeIcon
-                    className={"pricing__table-option-item-price-wrap-check"}
+                    onClick={option5}
+                    className={`pricing__table-option-item-price-wrap-check ${
+                      check5 ? "show" : "hide"
+                    }`}
                     icon={faCircleCheck}
                     width="17"
                     height="16"
                   />
                   <svg
+                    onClick={option5}
+                    className={check5 ? "hide" : "show"}
                     xmlns="http://www.w3.org/2000/svg"
                     width="17"
                     height="16"
@@ -857,18 +976,30 @@ function Pricing() {
                       stroke="#E2E2E2"
                     />
                   </svg>
-                  <div className="pricing__table-option-item-price-wrap-save">
+                  <span className="pricing__table-option-item-price-wrap-custom">
                     Customize IPs
-                  </div>
+                  </span>
                 </div>
-                <div className="pricing__table-option-item-price-detail">
+                <span className="pricing__table-option-item-price-wrap-unknow">
                   ???
-                </div>
+                </span>
               </div>
               <div className="pricing__table-option-item-total">
-                <div className="pricing__table-option-item-total-wrap">
+                <div
+                  className={`pricing__table-option-item-total-contact ${
+                    contact ? "show" : "hide"
+                  }`}
+                >
                   Contact Us
                 </div>
+                <button className={!contact ? "show" : "hide"}>
+                  <Link
+                    href="#"
+                    className="pricing__table-option-item-total-btn"
+                  >
+                    Contact Us
+                  </Link>
+                </button>
               </div>
             </div>
           </div>

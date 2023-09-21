@@ -1,49 +1,47 @@
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 *,
 *:before,
 *:after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 input,
 textarea,
 select,
 button {
-    outline: none;
-    border: none;
+  outline: none;
+  border: none;
 }
 
 input {
-    line-height: normal;
+  line-height: normal;
 }
 
 label,
 button {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 img {
-    display: block;
-    max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
-ul, li{
-    margin: 0;
-    padding: 0;
-    list-style: none;
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
-
-
-   
