@@ -391,9 +391,10 @@ function Pricing() {
                       }`}
                     >
                       <input
+                        type="text"
                         placeholder="Add coupon code here"
-                        onChange={(e) => setValueCode(e.target.value)}
                         value={valueCode}
+                        onChange={(e) => setValueCode(e.target.value)}
                       />
                       <button
                         onClick={sendCode}

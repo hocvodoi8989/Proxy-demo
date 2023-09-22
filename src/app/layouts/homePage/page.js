@@ -3,6 +3,7 @@ import Image from "next/image";
 import Header from "@/components/header/Header";
 // import Footer from "@/components/footer/Footer";
 import Pricing from "@/components/pricing/Pricing";
+import Question from "@/components/question/Question";
 
 function HomePage() {
 
@@ -1634,6 +1635,7 @@ function HomePage() {
       </section>
       <section className="core"></section>
       <Pricing />
+      <Question />
       {/* <Footer /> */}
     </main>
   );
