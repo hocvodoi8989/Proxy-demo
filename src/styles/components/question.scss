@@ -177,7 +177,17 @@
                     }
                 }
             }   
+.hidden {
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(-50px);
+}
 
+.showed {
+    transition: all 0.3s ease;
+    opacity: 1;
+    transform: translateY(0px);
+}
             &-right {
                 display: flex;
                 flex-direction: column;

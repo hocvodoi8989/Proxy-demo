@@ -149,9 +149,9 @@ function Header() {
               icon={faChevronDown}
             />
           </div>
-          <div className="header__menu-action-resources">Resources</div>
-          <div className="header__menu-action-blogs">Blogs</div>
-          <div className="header__menu-action-flatforms">The Flatforms</div>
+          <div className="header__menu-action-resources"><Link className="header__menu-action-resources-link" href="#">Resources</Link></div>
+          <div className="header__menu-action-blogs"><Link className="header__menu-action-blogs-link" href="#">Blogs</Link></div>
+          <div className="header__menu-action-flatforms"><Link className="header__menu-action-flatforms-link" href="#">The Flatforms</Link></div>
         </div>
         <div className="header__menu-account">
           <div className="header__menu-account-login">Login</div>

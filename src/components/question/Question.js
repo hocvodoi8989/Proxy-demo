@@ -16,6 +16,11 @@ function Question() {
 
   const [checkFAQs, setCheckFAQs] = useState(objectFAQs);
 
+  // const showDetail = (number) => {
+  //   handleCheckFAQs(number)
+
+  // }
+
   const handleCheckFAQs = (number) => {
     switch (Number(number)) {
       case 1:
@@ -200,7 +205,7 @@ function Question() {
               </div>
               <div
                 className={`question__faq-content-left-item-child ${
-                  !checkFAQs.one ? "hide" : "show"
+                  !checkFAQs.one ? "hidden" : "showed"
                 }`}
               >
                 Lorem ipsum dolor sit amet consectetur adipisicing elit sed sol
