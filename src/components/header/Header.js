@@ -5,6 +5,7 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import Image from "next/image";
 import Tippy from "@tippyjs/react/headless";
+import Popup from "../popup/PopUp";
 
 function Header() {
   return (
@@ -59,13 +60,20 @@ function Header() {
           />
         </Link>
         <div className="header__menu-action">
-          <div className="header__menu-action-pricing">
-            <span className="header__menu-action-pricing-title">Pricing</span>
-            <FontAwesomeIcon
-              className="header__menu-action-icon"
-              icon={faChevronDown}
-            />
-          </div>
+          <Tippy
+            interactive
+            render={(attrs) => (
+              <Popup></Popup>
+            )}
+          >
+            <div className="header__menu-action-pricing">
+              <span className="header__menu-action-pricing-title">Pricing</span>
+              <FontAwesomeIcon
+                className="header__menu-action-icon"
+                icon={faChevronDown}
+              />
+            </div>
+          </Tippy>
           <Tippy
             interactive
             render={(attrs) => (
@@ -140,21 +148,28 @@ function Header() {
             </div>
           </Tippy>
 
-          <div className="header__menu-action-locations">
-            <span className="header__menu-action-locations-title">
-              Locations
-            </span>
-            <FontAwesomeIcon
-              className="header__menu-action-icon"
-              icon={faChevronDown}
-            />
-          </div>
-          <div className="header__menu-action-resources"><Link className="header__menu-action-resources-link" href="#">Resources</Link></div>
-          <div className="header__menu-action-blogs"><Link className="header__menu-action-blogs-link" href="#">Blogs</Link></div>
-          <div className="header__menu-action-flatforms"><Link className="header__menu-action-flatforms-link" href="#">The Flatforms</Link></div>
+          <Tippy
+            interactive
+            render={(attrs) => (
+              <Popup></Popup>
+            )}
+          >
+            <div className="header__menu-action-locations">
+              <span className="header__menu-action-locations-title">
+                Locations
+              </span>
+              <FontAwesomeIcon
+                className="header__menu-action-icon"
+                icon={faChevronDown}
+              />
+            </div>
+          </Tippy>
+          <div className="header__menu-action-resources"><Link href="#">Resources</Link></div>
+          <div className="header__menu-action-blogs"><Link href="#">Blogs</Link></div>
+          <div className="header__menu-action-flatforms"><Link href="#">The Flatforms</Link></div>
         </div>
         <div className="header__menu-account">
-          <div className="header__menu-account-login">Login</div>
+          <div className="header__menu-account-login"><Link href="/login">Login</Link></div>
           <Link href="/signup">
             <button className="header__menu-account-signup">Sign Up</button>
           </Link>

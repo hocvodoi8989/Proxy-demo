@@ -374,7 +374,7 @@ function Pricing() {
                 <div className="pricing__table-interest-pay-wrap-title">
                   <div className="pricing__table-interest-pay-wrap-title-money">
                     <p>You need pay:</p>
-                    <div className={disable ? "disable" : ""}>{price}</div>
+                    <div className={disable ? "disable" : ""}>{check5 ? "$00.00" :price}</div>
                   </div>
                   <div className="pricing__table-interest-pay-wrap-title-code">
                     <p
