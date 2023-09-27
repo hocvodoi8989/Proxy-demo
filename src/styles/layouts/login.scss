@@ -1,0 +1,43 @@
+.login {
+    width: 57%;
+    background-color: $whiteColor;
+    padding: 10px 170px;
+
+    &__wrap {
+        width: 700px;
+        height: 797px;
+        position: absolute;
+        transform: translateY(-50%);
+        top: 50%;
+        padding: 0px 60px;
+
+        &-head {
+            display: inline-block;
+
+            h1 {
+                color: $textColor1;
+                margin-top: 30px;
+                font-size: 36px;
+                font-weight: 500;
+                text-transform: capitalize;
+            }
+
+            p {
+                color: $textColor2;
+                margin-top: 15px;
+                font-size: 16px;
+                text-transform: capitalize;
+            }
+        }
+
+        &-body {
+            margin-top: 50px;
+
+            &-tab {
+                width: 400px;
+                height: 54px;
+                background-color: #F1F3F4;
+            }
+        }
+    }
+}

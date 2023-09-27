@@ -1,7 +1,5 @@
 "use client";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import Image from "next/image";
 import Tippy from "@tippyjs/react/headless";
@@ -42,10 +40,9 @@ function Header() {
         </div>
         <div className="header__top-language">
           <span className="header__top-language_title">English</span>
-          <FontAwesomeIcon
-            className="header__top-language_icon"
-            icon={faChevronDown}
-          />
+          <svg xmlns="http://www.w3.org/2000/svg" width="9" height="6" viewBox="0 0 9 6" fill="none">
+            <path d="M4.37531 5.66824C4.2931 5.66874 4.2116 5.65215 4.13549 5.61943C4.05938 5.58671 3.99016 5.53849 3.93179 5.47755L0.183713 1.53216C0.0660836 1.40833 0 1.2404 0 1.06528C0 0.890174 0.0660836 0.722236 0.183713 0.598414C0.301342 0.474592 0.460882 0.405029 0.627235 0.405029C0.793588 0.405029 0.953128 0.474592 1.07076 0.598414L4.37531 4.08351L7.67986 0.60499C7.79937 0.497263 7.95308 0.440971 8.1103 0.447363C8.26752 0.453756 8.41665 0.522361 8.5279 0.63947C8.63916 0.756579 8.70433 0.913565 8.7104 1.07906C8.71647 1.24455 8.663 1.40636 8.56066 1.53216L4.81259 5.47755C4.69623 5.59903 4.53919 5.66751 4.37531 5.66824Z" fill="#737588"/>
+          </svg>
         </div>
       </div>
       <div className="header__menu">
@@ -68,10 +65,9 @@ function Header() {
           >
             <div className="header__menu-action-pricing">
               <span className="header__menu-action-pricing-title">Pricing</span>
-              <FontAwesomeIcon
-                className="header__menu-action-icon"
-                icon={faChevronDown}
-              />
+              <svg xmlns="http://www.w3.org/2000/svg" width="9" height="6" viewBox="0 0 9 6" fill="none">
+                <path d="M4.58283 5.07934C4.50062 5.07981 4.41912 5.06405 4.34301 5.03297C4.2669 5.00188 4.19768 4.95607 4.13931 4.89818L0.391232 1.1501C0.273603 1.03247 0.20752 0.872934 0.20752 0.706581C0.20752 0.540228 0.273603 0.380688 0.391232 0.263059C0.508862 0.145429 0.668402 0.0793457 0.834755 0.0793457C1.00111 0.0793457 1.16065 0.145429 1.27828 0.263059L4.58283 3.57386L7.88738 0.269306C8.00688 0.166967 8.1606 0.11349 8.31782 0.119563C8.47504 0.125635 8.62417 0.19081 8.73542 0.302062C8.84668 0.413314 8.91185 0.562449 8.91792 0.719666C8.92399 0.876883 8.87052 1.0306 8.76818 1.1501L5.0201 4.89818C4.90375 5.01358 4.74671 5.07865 4.58283 5.07934Z" fill="#112446"/>
+              </svg>
             </div>
           </Tippy>
           <Tippy
@@ -141,10 +137,9 @@ function Header() {
               <span className="header__menu-action-proxys-title">
                 Get Proxys
               </span>
-              <FontAwesomeIcon
-                className="header__menu-action-icon"
-                icon={faChevronDown}
-              />
+              <svg xmlns="http://www.w3.org/2000/svg" width="9" height="6" viewBox="0 0 9 6" fill="none">
+                <path d="M4.58283 5.07934C4.50062 5.07981 4.41912 5.06405 4.34301 5.03297C4.2669 5.00188 4.19768 4.95607 4.13931 4.89818L0.391232 1.1501C0.273603 1.03247 0.20752 0.872934 0.20752 0.706581C0.20752 0.540228 0.273603 0.380688 0.391232 0.263059C0.508862 0.145429 0.668402 0.0793457 0.834755 0.0793457C1.00111 0.0793457 1.16065 0.145429 1.27828 0.263059L4.58283 3.57386L7.88738 0.269306C8.00688 0.166967 8.1606 0.11349 8.31782 0.119563C8.47504 0.125635 8.62417 0.19081 8.73542 0.302062C8.84668 0.413314 8.91185 0.562449 8.91792 0.719666C8.92399 0.876883 8.87052 1.0306 8.76818 1.1501L5.0201 4.89818C4.90375 5.01358 4.74671 5.07865 4.58283 5.07934Z" fill="#112446"/>
+              </svg>
             </div>
           </Tippy>
 
@@ -158,10 +153,9 @@ function Header() {
               <span className="header__menu-action-locations-title">
                 Locations
               </span>
-              <FontAwesomeIcon
-                className="header__menu-action-icon"
-                icon={faChevronDown}
-              />
+              <svg xmlns="http://www.w3.org/2000/svg" width="9" height="6" viewBox="0 0 9 6" fill="none">
+                <path d="M4.58283 5.07934C4.50062 5.07981 4.41912 5.06405 4.34301 5.03297C4.2669 5.00188 4.19768 4.95607 4.13931 4.89818L0.391232 1.1501C0.273603 1.03247 0.20752 0.872934 0.20752 0.706581C0.20752 0.540228 0.273603 0.380688 0.391232 0.263059C0.508862 0.145429 0.668402 0.0793457 0.834755 0.0793457C1.00111 0.0793457 1.16065 0.145429 1.27828 0.263059L4.58283 3.57386L7.88738 0.269306C8.00688 0.166967 8.1606 0.11349 8.31782 0.119563C8.47504 0.125635 8.62417 0.19081 8.73542 0.302062C8.84668 0.413314 8.91185 0.562449 8.91792 0.719666C8.92399 0.876883 8.87052 1.0306 8.76818 1.1501L5.0201 4.89818C4.90375 5.01358 4.74671 5.07865 4.58283 5.07934Z" fill="#112446"/>
+              </svg>
             </div>
           </Tippy>
           <div className="header__menu-action-resources"><Link href="#">Resources</Link></div>

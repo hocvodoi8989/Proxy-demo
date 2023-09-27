@@ -538,4 +538,15 @@
   height: 100px;
 }
 
+@media only screen and (min-width: 1424px) and (max-width: 1409px) {
+  .wrapper {
+    padding: 0 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .wrapper {
+    padding: 0 20px;
+  }
+}
 

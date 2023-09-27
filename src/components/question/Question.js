@@ -16,11 +16,6 @@ function Question() {
 
   const [checkFAQs, setCheckFAQs] = useState(objectFAQs);
 
-  // const showDetail = (number) => {
-  //   handleCheckFAQs(number)
-
-  // }
-
   const handleCheckFAQs = (number) => {
     switch (Number(number)) {
       case 1:
@@ -166,382 +161,386 @@ function Question() {
           <div className="question__faq-content">
             <div className="question__faq-content-left">
               <div className="question__faq-content-left-item">
-                <span>Are your proxies anonymous?</span>
-                <svg
-                  onClick={() => handleCheckFAQs(1)}
-                  className={checkFAQs.one ? "hide" : "show"}
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                >
-                  <g clipPath="url(#clip0_2890_12182)">
+                <div className="question__faq-content-left-item-title">
+                  <span>Are your proxies anonymous?</span>
+                  <svg
+                    onClick={() => handleCheckFAQs(1)}
+                    className={checkFAQs.one ? "hide" : "show"}
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                  >
+                    <g clipPath="url(#clip0_2890_12182)">
+                      <path
+                        d="M15.375 7.375H8.625V0.625C8.625 0.279813 8.34519 0 8 0C7.65481 0 7.375 0.279813 7.375 0.625V7.375H0.625C0.279813 7.375 0 7.65481 0 8C0 8.34519 0.279813 8.625 0.625 8.625H7.375V15.375C7.375 15.7202 7.65481 16 8 16C8.34519 16 8.625 15.7202 8.625 15.375V8.625H15.375C15.7202 8.625 16 8.34519 16 8C16 7.65481 15.7202 7.375 15.375 7.375Z"
+                        fill="#112446"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_2890_12182">
+                        <rect width="16" height="16" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  <svg
+                    onClick={() => handleCheckFAQs(0)}
+                    className={!checkFAQs.one ? "hide" : "show"}
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                  >
                     <path
-                      d="M15.375 7.375H8.625V0.625C8.625 0.279813 8.34519 0 8 0C7.65481 0 7.375 0.279813 7.375 0.625V7.375H0.625C0.279813 7.375 0 7.65481 0 8C0 8.34519 0.279813 8.625 0.625 8.625H7.375V15.375C7.375 15.7202 7.65481 16 8 16C8.34519 16 8.625 15.7202 8.625 15.375V8.625H15.375C15.7202 8.625 16 8.34519 16 8C16 7.65481 15.7202 7.375 15.375 7.375Z"
+                      d="M0.959968 8.96013H15.04C15.5703 8.96013 16.0001 8.53032 16.0001 7.99989C16.0001 7.4696 15.5705 7.03979 15.04 7.03979H0.959968C0.429805 7.03993 0 7.46973 0 8.00003C0 8.53032 0.429805 8.96013 0.959968 8.96013Z"
                       fill="#112446"
                     />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_2890_12182">
-                      <rect width="16" height="16" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
-                <svg
-                  onClick={() => handleCheckFAQs(0)}
-                  className={!checkFAQs.one ? "hide" : "show"}
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                >
-                  <path
-                    d="M0.959968 8.96013H15.04C15.5703 8.96013 16.0001 8.53032 16.0001 7.99989C16.0001 7.4696 15.5705 7.03979 15.04 7.03979H0.959968C0.429805 7.03993 0 7.46973 0 8.00003C0 8.53032 0.429805 8.96013 0.959968 8.96013Z"
-                    fill="#112446"
-                  />
-                </svg>
+                  </svg>
+                </div>
+                <div className={`question__faq-content-left-item-title-child ${!checkFAQs.one ? "hidden" : "showed"}`}>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit sed
+                    sol iusmod tempor incididunt ut labore et dolore magna et
+                    aliqua ut eos enim ad minim veniam quis nostrudexercitation.
+                  </p>
+                </div>
               </div>
-              <div
-                className={`question__faq-content-left-item-child ${
-                  !checkFAQs.one ? "hidden" : "showed"
-                }`}
-              >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit sed sol
-                iusmod tempor incididunt ut labore et dolore magna et aliqua ut
-                eos enim ad minim veniam quis nostrudexercitation.
+
+              <div className="question__faq-content-left-item">
+                <div className="question__faq-content-left-item-title">
+                  <span>Can you prepare a custom proxy package for me?</span>
+                  <svg
+                    onClick={() => handleCheckFAQs(2)}
+                    className={checkFAQs.two ? "hide" : "show"}
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                  >
+                    <g clipPath="url(#clip0_2890_12182)">
+                      <path
+                        d="M15.375 7.375H8.625V0.625C8.625 0.279813 8.34519 0 8 0C7.65481 0 7.375 0.279813 7.375 0.625V7.375H0.625C0.279813 7.375 0 7.65481 0 8C0 8.34519 0.279813 8.625 0.625 8.625H7.375V15.375C7.375 15.7202 7.65481 16 8 16C8.34519 16 8.625 15.7202 8.625 15.375V8.625H15.375C15.7202 8.625 16 8.34519 16 8C16 7.65481 15.7202 7.375 15.375 7.375Z"
+                        fill="#112446"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_2890_12182">
+                        <rect width="16" height="16" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  <svg
+                    onClick={() => handleCheckFAQs(0)}
+                    className={!checkFAQs.two ? "hide" : "show"}
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                  >
+                    <path
+                      d="M0.959968 8.96013H15.04C15.5703 8.96013 16.0001 8.53032 16.0001 7.99989C16.0001 7.4696 15.5705 7.03979 15.04 7.03979H0.959968C0.429805 7.03993 0 7.46973 0 8.00003C0 8.53032 0.429805 8.96013 0.959968 8.96013Z"
+                      fill="#112446"
+                    />
+                  </svg>
+                </div>
+                <div className={`question__faq-content-left-item-title-child`}>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit sed
+                    sol iusmod tempor incididunt ut labore et dolore magna et
+                    aliqua ut eos enim ad minim veniam quis nostrudexercitation.
+                  </p>
+                </div>
               </div>
               <div className="question__faq-content-left-item">
-                <span>Can you prepare a custom proxy package for me?</span>
-                <svg
-                  onClick={() => handleCheckFAQs(2)}
-                  className={checkFAQs.two ? "hide" : "show"}
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                >
-                  <g clipPath="url(#clip0_2890_12182)">
+                <div className="question__faq-content-left-item-title">
+                  <span>How long can I use the proxy?</span>
+                  <svg
+                    onClick={() => handleCheckFAQs(3)}
+                    className={checkFAQs.three ? "hide" : "show"}
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                  >
+                    <g clipPath="url(#clip0_2890_12182)">
+                      <path
+                        d="M15.375 7.375H8.625V0.625C8.625 0.279813 8.34519 0 8 0C7.65481 0 7.375 0.279813 7.375 0.625V7.375H0.625C0.279813 7.375 0 7.65481 0 8C0 8.34519 0.279813 8.625 0.625 8.625H7.375V15.375C7.375 15.7202 7.65481 16 8 16C8.34519 16 8.625 15.7202 8.625 15.375V8.625H15.375C15.7202 8.625 16 8.34519 16 8C16 7.65481 15.7202 7.375 15.375 7.375Z"
+                        fill="#112446"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_2890_12182">
+                        <rect width="16" height="16" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  <svg
+                    onClick={() => handleCheckFAQs(0)}
+                    className={!checkFAQs.three ? "hide" : "show"}
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                  >
                     <path
-                      d="M15.375 7.375H8.625V0.625C8.625 0.279813 8.34519 0 8 0C7.65481 0 7.375 0.279813 7.375 0.625V7.375H0.625C0.279813 7.375 0 7.65481 0 8C0 8.34519 0.279813 8.625 0.625 8.625H7.375V15.375C7.375 15.7202 7.65481 16 8 16C8.34519 16 8.625 15.7202 8.625 15.375V8.625H15.375C15.7202 8.625 16 8.34519 16 8C16 7.65481 15.7202 7.375 15.375 7.375Z"
+                      d="M0.959968 8.96013H15.04C15.5703 8.96013 16.0001 8.53032 16.0001 7.99989C16.0001 7.4696 15.5705 7.03979 15.04 7.03979H0.959968C0.429805 7.03993 0 7.46973 0 8.00003C0 8.53032 0.429805 8.96013 0.959968 8.96013Z"
                       fill="#112446"
                     />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_2890_12182">
-                      <rect width="16" height="16" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
-                <svg
-                  onClick={() => handleCheckFAQs(0)}
-                  className={!checkFAQs.two ? "hide" : "show"}
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                >
-                  <path
-                    d="M0.959968 8.96013H15.04C15.5703 8.96013 16.0001 8.53032 16.0001 7.99989C16.0001 7.4696 15.5705 7.03979 15.04 7.03979H0.959968C0.429805 7.03993 0 7.46973 0 8.00003C0 8.53032 0.429805 8.96013 0.959968 8.96013Z"
-                    fill="#112446"
-                  />
-                </svg>
-              </div>
-              <div
-                className={`question__faq-content-left-item-child ${
-                  !checkFAQs.two ? "hide" : "show"
-                }`}
-              >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit sed sol
-                iusmod tempor incididunt ut labore et dolore magna et aliqua ut
-                eos enim ad minim veniam quis nostrudexercitation.
+                  </svg>
+                </div>
+                <div className={`question__faq-content-left-item-title-child`}>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit sed
+                    sol iusmod tempor incididunt ut labore et dolore magna et
+                    aliqua ut eos enim ad minim veniam quis nostrudexercitation.
+                  </p>
+                </div>
               </div>
               <div className="question__faq-content-left-item">
-                <span>How long can I use the proxy?</span>
-                <svg
-                  onClick={() => handleCheckFAQs(3)}
-                  className={checkFAQs.three ? "hide" : "show"}
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                >
-                  <g clipPath="url(#clip0_2890_12182)">
+                <div className="question__faq-content-left-item-title">
+                  <span>Can I select proxies from a specific location?</span>
+                  <svg
+                    onClick={() => handleCheckFAQs(4)}
+                    className={checkFAQs.four ? "hide" : "show"}
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                  >
+                    <g clipPath="url(#clip0_2890_12182)">
+                      <path
+                        d="M15.375 7.375H8.625V0.625C8.625 0.279813 8.34519 0 8 0C7.65481 0 7.375 0.279813 7.375 0.625V7.375H0.625C0.279813 7.375 0 7.65481 0 8C0 8.34519 0.279813 8.625 0.625 8.625H7.375V15.375C7.375 15.7202 7.65481 16 8 16C8.34519 16 8.625 15.7202 8.625 15.375V8.625H15.375C15.7202 8.625 16 8.34519 16 8C16 7.65481 15.7202 7.375 15.375 7.375Z"
+                        fill="#112446"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_2890_12182">
+                        <rect width="16" height="16" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  <svg
+                    onClick={() => handleCheckFAQs(0)}
+                    className={!checkFAQs.four ? "hide" : "show"}
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                  >
                     <path
-                      d="M15.375 7.375H8.625V0.625C8.625 0.279813 8.34519 0 8 0C7.65481 0 7.375 0.279813 7.375 0.625V7.375H0.625C0.279813 7.375 0 7.65481 0 8C0 8.34519 0.279813 8.625 0.625 8.625H7.375V15.375C7.375 15.7202 7.65481 16 8 16C8.34519 16 8.625 15.7202 8.625 15.375V8.625H15.375C15.7202 8.625 16 8.34519 16 8C16 7.65481 15.7202 7.375 15.375 7.375Z"
+                      d="M0.959968 8.96013H15.04C15.5703 8.96013 16.0001 8.53032 16.0001 7.99989C16.0001 7.4696 15.5705 7.03979 15.04 7.03979H0.959968C0.429805 7.03993 0 7.46973 0 8.00003C0 8.53032 0.429805 8.96013 0.959968 8.96013Z"
                       fill="#112446"
                     />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_2890_12182">
-                      <rect width="16" height="16" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
-                <svg
-                  onClick={() => handleCheckFAQs(0)}
-                  className={!checkFAQs.three ? "hide" : "show"}
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                >
-                  <path
-                    d="M0.959968 8.96013H15.04C15.5703 8.96013 16.0001 8.53032 16.0001 7.99989C16.0001 7.4696 15.5705 7.03979 15.04 7.03979H0.959968C0.429805 7.03993 0 7.46973 0 8.00003C0 8.53032 0.429805 8.96013 0.959968 8.96013Z"
-                    fill="#112446"
-                  />
-                </svg>
-              </div>
-              <div
-                className={`question__faq-content-left-item-child ${
-                  !checkFAQs.three ? "hide" : "show"
-                }`}
-              >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit sed sol
-                iusmod tempor incididunt ut labore et dolore magna et aliqua ut
-                eos enim ad minim veniam quis nostrudexercitation.
-              </div>
-              <div className="question__faq-content-left-item">
-                <span>Can I select proxies from a specific location?</span>
-                <svg
-                  onClick={() => handleCheckFAQs(4)}
-                  className={checkFAQs.four ? "hide" : "show"}
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                >
-                  <g clipPath="url(#clip0_2890_12182)">
-                    <path
-                      d="M15.375 7.375H8.625V0.625C8.625 0.279813 8.34519 0 8 0C7.65481 0 7.375 0.279813 7.375 0.625V7.375H0.625C0.279813 7.375 0 7.65481 0 8C0 8.34519 0.279813 8.625 0.625 8.625H7.375V15.375C7.375 15.7202 7.65481 16 8 16C8.34519 16 8.625 15.7202 8.625 15.375V8.625H15.375C15.7202 8.625 16 8.34519 16 8C16 7.65481 15.7202 7.375 15.375 7.375Z"
-                      fill="#112446"
-                    />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_2890_12182">
-                      <rect width="16" height="16" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
-                <svg
-                  onClick={() => handleCheckFAQs(0)}
-                  className={!checkFAQs.four ? "hide" : "show"}
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                >
-                  <path
-                    d="M0.959968 8.96013H15.04C15.5703 8.96013 16.0001 8.53032 16.0001 7.99989C16.0001 7.4696 15.5705 7.03979 15.04 7.03979H0.959968C0.429805 7.03993 0 7.46973 0 8.00003C0 8.53032 0.429805 8.96013 0.959968 8.96013Z"
-                    fill="#112446"
-                  />
-                </svg>
-              </div>
-              <div
-                className={`question__faq-content-left-item-child ${
-                  !checkFAQs.four ? "hide" : "show"
-                }`}
-              >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit sed sol
-                iusmod tempor incididunt ut labore et dolore magna et aliqua ut
-                eos enim ad minim veniam quis nostrudexercitation.
+                  </svg>
+                </div>
+                <div className={`question__faq-content-left-item-title-child`}>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit sed
+                    sol iusmod tempor incididunt ut labore et dolore magna et
+                    aliqua ut eos enim ad minim veniam quis nostrudexercitation.
+                  </p>
+                </div>
               </div>
             </div>
             <div className="question__faq-content-right">
-              <div className="question__faq-content-right-item">
-                <span>Can I integrate proxies with 3rd party software?</span>
-                <svg
-                  onClick={() => handleCheckFAQs(5)}
-                  className={checkFAQs.five ? "hide" : "show"}
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                >
-                  <g clipPath="url(#clip0_2890_12182)">
+              <div className="question__faq-content-left-item">
+                <div className="question__faq-content-left-item-title">
+                  <span>Can I integrate proxies with 3rd party software?</span>
+                  <svg
+                    onClick={() => handleCheckFAQs(5)}
+                    className={checkFAQs.five ? "hide" : "show"}
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                  >
+                    <g clipPath="url(#clip0_2890_12182)">
+                      <path
+                        d="M15.375 7.375H8.625V0.625C8.625 0.279813 8.34519 0 8 0C7.65481 0 7.375 0.279813 7.375 0.625V7.375H0.625C0.279813 7.375 0 7.65481 0 8C0 8.34519 0.279813 8.625 0.625 8.625H7.375V15.375C7.375 15.7202 7.65481 16 8 16C8.34519 16 8.625 15.7202 8.625 15.375V8.625H15.375C15.7202 8.625 16 8.34519 16 8C16 7.65481 15.7202 7.375 15.375 7.375Z"
+                        fill="#112446"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_2890_12182">
+                        <rect width="16" height="16" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  <svg
+                    onClick={() => handleCheckFAQs(0)}
+                    className={!checkFAQs.five ? "hide" : "show"}
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                  >
                     <path
-                      d="M15.375 7.375H8.625V0.625C8.625 0.279813 8.34519 0 8 0C7.65481 0 7.375 0.279813 7.375 0.625V7.375H0.625C0.279813 7.375 0 7.65481 0 8C0 8.34519 0.279813 8.625 0.625 8.625H7.375V15.375C7.375 15.7202 7.65481 16 8 16C8.34519 16 8.625 15.7202 8.625 15.375V8.625H15.375C15.7202 8.625 16 8.34519 16 8C16 7.65481 15.7202 7.375 15.375 7.375Z"
+                      d="M0.959968 8.96013H15.04C15.5703 8.96013 16.0001 8.53032 16.0001 7.99989C16.0001 7.4696 15.5705 7.03979 15.04 7.03979H0.959968C0.429805 7.03993 0 7.46973 0 8.00003C0 8.53032 0.429805 8.96013 0.959968 8.96013Z"
                       fill="#112446"
                     />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_2890_12182">
-                      <rect width="16" height="16" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
-                <svg
-                  onClick={() => handleCheckFAQs(0)}
-                  className={!checkFAQs.five ? "hide" : "show"}
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                >
-                  <path
-                    d="M0.959968 8.96013H15.04C15.5703 8.96013 16.0001 8.53032 16.0001 7.99989C16.0001 7.4696 15.5705 7.03979 15.04 7.03979H0.959968C0.429805 7.03993 0 7.46973 0 8.00003C0 8.53032 0.429805 8.96013 0.959968 8.96013Z"
-                    fill="#112446"
-                  />
-                </svg>
+                  </svg>
+                </div>
+                <div className={`question__faq-content-left-item-title-child`}>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit sed
+                    sol iusmod tempor incididunt ut labore et dolore magna et
+                    aliqua ut eos enim ad minim veniam quis nostrudexercitation.
+                  </p>
+                </div>
               </div>
-              <div
-                className={`question__faq-content-left-item-child ${
-                  !checkFAQs.five ? "hide" : "show"
-                }`}
-              >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit sed sol
-                iusmod tempor incididunt ut labore et dolore magna et aliqua ut
-                eos enim ad minim veniam quis nostrudexercitation.
-              </div>
-              <div className="question__faq-content-right-item">
-                <span>3 Where can I use residential IP addresses?</span>
-                <svg
-                  onClick={() => handleCheckFAQs(6)}
-                  className={checkFAQs.six ? "hide" : "show"}
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                >
-                  <g clipPath="url(#clip0_2890_12182)">
+
+              <div className="question__faq-content-left-item">
+                <div className="question__faq-content-left-item-title">
+                  <span>3 Where can I use residential IP addresses?</span>
+                  <svg
+                    onClick={() => handleCheckFAQs(6)}
+                    className={checkFAQs.six ? "hide" : "show"}
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                  >
+                    <g clipPath="url(#clip0_2890_12182)">
+                      <path
+                        d="M15.375 7.375H8.625V0.625C8.625 0.279813 8.34519 0 8 0C7.65481 0 7.375 0.279813 7.375 0.625V7.375H0.625C0.279813 7.375 0 7.65481 0 8C0 8.34519 0.279813 8.625 0.625 8.625H7.375V15.375C7.375 15.7202 7.65481 16 8 16C8.34519 16 8.625 15.7202 8.625 15.375V8.625H15.375C15.7202 8.625 16 8.34519 16 8C16 7.65481 15.7202 7.375 15.375 7.375Z"
+                        fill="#112446"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_2890_12182">
+                        <rect width="16" height="16" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  <svg
+                    onClick={() => handleCheckFAQs(0)}
+                    className={!checkFAQs.six ? "hide" : "show"}
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                  >
                     <path
-                      d="M15.375 7.375H8.625V0.625C8.625 0.279813 8.34519 0 8 0C7.65481 0 7.375 0.279813 7.375 0.625V7.375H0.625C0.279813 7.375 0 7.65481 0 8C0 8.34519 0.279813 8.625 0.625 8.625H7.375V15.375C7.375 15.7202 7.65481 16 8 16C8.34519 16 8.625 15.7202 8.625 15.375V8.625H15.375C15.7202 8.625 16 8.34519 16 8C16 7.65481 15.7202 7.375 15.375 7.375Z"
+                      d="M0.959968 8.96013H15.04C15.5703 8.96013 16.0001 8.53032 16.0001 7.99989C16.0001 7.4696 15.5705 7.03979 15.04 7.03979H0.959968C0.429805 7.03993 0 7.46973 0 8.00003C0 8.53032 0.429805 8.96013 0.959968 8.96013Z"
                       fill="#112446"
                     />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_2890_12182">
-                      <rect width="16" height="16" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
-                <svg
-                  onClick={() => handleCheckFAQs(0)}
-                  className={!checkFAQs.six ? "hide" : "show"}
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                >
-                  <path
-                    d="M0.959968 8.96013H15.04C15.5703 8.96013 16.0001 8.53032 16.0001 7.99989C16.0001 7.4696 15.5705 7.03979 15.04 7.03979H0.959968C0.429805 7.03993 0 7.46973 0 8.00003C0 8.53032 0.429805 8.96013 0.959968 8.96013Z"
-                    fill="#112446"
-                  />
-                </svg>
+                  </svg>
+                </div>
+                <div className={`question__faq-content-left-item-title-child`}>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit sed
+                    sol iusmod tempor incididunt ut labore et dolore magna et
+                    aliqua ut eos enim ad minim veniam quis nostrudexercitation.
+                  </p>
+                </div>
               </div>
-              <div
-                className={`question__faq-content-left-item-child ${
-                  !checkFAQs.six ? "hide" : "show"
-                }`}
-              >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit sed sol
-                iusmod tempor incididunt ut labore et dolore magna et aliqua ut
-                eos enim ad minim veniam quis nostrudexercitation.
-              </div>
-              <div className="question__faq-content-right-item">
-                <span>Are your proxies anonymous?</span>
-                <svg
-                  onClick={() => handleCheckFAQs(7)}
-                  className={checkFAQs.seven ? "hide" : "show"}
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                >
-                  <g clipPath="url(#clip0_2890_12182)">
+
+              <div className="question__faq-content-left-item">
+                <div className="question__faq-content-left-item-title">
+                  <span>Are your proxies anonymous?</span>
+                  <svg
+                    onClick={() => handleCheckFAQs(7)}
+                    className={checkFAQs.seven ? "hide" : "show"}
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                  >
+                    <g clipPath="url(#clip0_2890_12182)">
+                      <path
+                        d="M15.375 7.375H8.625V0.625C8.625 0.279813 8.34519 0 8 0C7.65481 0 7.375 0.279813 7.375 0.625V7.375H0.625C0.279813 7.375 0 7.65481 0 8C0 8.34519 0.279813 8.625 0.625 8.625H7.375V15.375C7.375 15.7202 7.65481 16 8 16C8.34519 16 8.625 15.7202 8.625 15.375V8.625H15.375C15.7202 8.625 16 8.34519 16 8C16 7.65481 15.7202 7.375 15.375 7.375Z"
+                        fill="#112446"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_2890_12182">
+                        <rect width="16" height="16" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  <svg
+                    onClick={() => handleCheckFAQs(0)}
+                    className={!checkFAQs.seven ? "hide" : "show"}
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                  >
                     <path
-                      d="M15.375 7.375H8.625V0.625C8.625 0.279813 8.34519 0 8 0C7.65481 0 7.375 0.279813 7.375 0.625V7.375H0.625C0.279813 7.375 0 7.65481 0 8C0 8.34519 0.279813 8.625 0.625 8.625H7.375V15.375C7.375 15.7202 7.65481 16 8 16C8.34519 16 8.625 15.7202 8.625 15.375V8.625H15.375C15.7202 8.625 16 8.34519 16 8C16 7.65481 15.7202 7.375 15.375 7.375Z"
+                      d="M0.959968 8.96013H15.04C15.5703 8.96013 16.0001 8.53032 16.0001 7.99989C16.0001 7.4696 15.5705 7.03979 15.04 7.03979H0.959968C0.429805 7.03993 0 7.46973 0 8.00003C0 8.53032 0.429805 8.96013 0.959968 8.96013Z"
                       fill="#112446"
                     />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_2890_12182">
-                      <rect width="16" height="16" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
-                <svg
-                  onClick={() => handleCheckFAQs(0)}
-                  className={!checkFAQs.seven ? "hide" : "show"}
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                >
-                  <path
-                    d="M0.959968 8.96013H15.04C15.5703 8.96013 16.0001 8.53032 16.0001 7.99989C16.0001 7.4696 15.5705 7.03979 15.04 7.03979H0.959968C0.429805 7.03993 0 7.46973 0 8.00003C0 8.53032 0.429805 8.96013 0.959968 8.96013Z"
-                    fill="#112446"
-                  />
-                </svg>
+                  </svg>
+                </div>
+                <div className={`question__faq-content-left-item-title-child`}>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit sed
+                    sol iusmod tempor incididunt ut labore et dolore magna et
+                    aliqua ut eos enim ad minim veniam quis nostrudexercitation.
+                  </p>
+                </div>
               </div>
-              <div
-                className={`question__faq-content-left-item-child ${
-                  !checkFAQs.seven ? "hide" : "show"
-                }`}
-              >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit sed sol
-                iusmod tempor incididunt ut labore et dolore magna et aliqua ut
-                eos enim ad minim veniam quis nostrudexercitation.
-              </div>
-              <div className="question__faq-content-right-item">
-                <span>4 How to buy a plan?</span>
-                <svg
-                  onClick={() => handleCheckFAQs(8)}
-                  className={checkFAQs.eight ? "hide" : "show"}
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                >
-                  <g clipPath="url(#clip0_2890_12182)">
+
+              <div className="question__faq-content-left-item">
+                <div className="question__faq-content-left-item-title">
+                  <span>4 How To Buy A Plan?</span>
+                  <svg
+                    onClick={() => handleCheckFAQs(1)}
+                    className={checkFAQs.eight ? "hide" : "show"}
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                  >
+                    <g clipPath="url(#clip0_2890_12182)">
+                      <path
+                        d="M15.375 7.375H8.625V0.625C8.625 0.279813 8.34519 0 8 0C7.65481 0 7.375 0.279813 7.375 0.625V7.375H0.625C0.279813 7.375 0 7.65481 0 8C0 8.34519 0.279813 8.625 0.625 8.625H7.375V15.375C7.375 15.7202 7.65481 16 8 16C8.34519 16 8.625 15.7202 8.625 15.375V8.625H15.375C15.7202 8.625 16 8.34519 16 8C16 7.65481 15.7202 7.375 15.375 7.375Z"
+                        fill="#112446"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_2890_12182">
+                        <rect width="16" height="16" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  <svg
+                    onClick={() => handleCheckFAQs(0)}
+                    className={!checkFAQs.eight ? "hide" : "show"}
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                  >
                     <path
-                      d="M15.375 7.375H8.625V0.625C8.625 0.279813 8.34519 0 8 0C7.65481 0 7.375 0.279813 7.375 0.625V7.375H0.625C0.279813 7.375 0 7.65481 0 8C0 8.34519 0.279813 8.625 0.625 8.625H7.375V15.375C7.375 15.7202 7.65481 16 8 16C8.34519 16 8.625 15.7202 8.625 15.375V8.625H15.375C15.7202 8.625 16 8.34519 16 8C16 7.65481 15.7202 7.375 15.375 7.375Z"
+                      d="M0.959968 8.96013H15.04C15.5703 8.96013 16.0001 8.53032 16.0001 7.99989C16.0001 7.4696 15.5705 7.03979 15.04 7.03979H0.959968C0.429805 7.03993 0 7.46973 0 8.00003C0 8.53032 0.429805 8.96013 0.959968 8.96013Z"
                       fill="#112446"
                     />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_2890_12182">
-                      <rect width="16" height="16" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
-                <svg
-                  onClick={() => handleCheckFAQs(0)}
-                  className={!checkFAQs.eight ? "hide" : "show"}
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                >
-                  <path
-                    d="M0.959968 8.96013H15.04C15.5703 8.96013 16.0001 8.53032 16.0001 7.99989C16.0001 7.4696 15.5705 7.03979 15.04 7.03979H0.959968C0.429805 7.03993 0 7.46973 0 8.00003C0 8.53032 0.429805 8.96013 0.959968 8.96013Z"
-                    fill="#112446"
-                  />
-                </svg>
-              </div>
-              <div
-                className={`question__faq-content-left-item-child ${
-                  !checkFAQs.eight ? "hide" : "show"
-                }`}
-              >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit sed sol
-                iusmod tempor incididunt ut labore et dolore magna et aliqua ut
-                eos enim ad minim veniam quis nostrudexercitation.
+                  </svg>
+                </div>
+                <div className={`question__faq-content-left-item-title-child`}>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit sed
+                    sol iusmod tempor incididunt ut labore et dolore magna et
+                    aliqua ut eos enim ad minim veniam quis nostrudexercitation.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
