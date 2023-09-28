@@ -50,6 +50,9 @@ function Question() {
     }
   };
 
+  if (checkFAQs.one) {
+  }
+
   return (
     <section className="question">
       <div className="wrapper">
@@ -160,9 +163,9 @@ function Question() {
           <h1 className="question__faq-head">Solve your usage problems</h1>
           <div className="question__faq-content">
             <div className="question__faq-content-left">
-              <div className="question__faq-content-left-item">
+            <div className="question__faq-content-left-item">
                 <div className="question__faq-content-left-item-title">
-                  <span>Are your proxies anonymous?</span>
+                  <span>Can you prepare a custom proxy package for me?</span>
                   <svg
                     onClick={() => handleCheckFAQs(1)}
                     className={checkFAQs.one ? "hide" : "show"}
@@ -247,7 +250,7 @@ function Question() {
                     />
                   </svg>
                 </div>
-                <div className={`question__faq-content-left-item-title-child`}>
+                <div className={`question__faq-content-left-item-title-child ${!checkFAQs.two ? "hidden" : "showed"}`}>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit sed
                     sol iusmod tempor incididunt ut labore et dolore magna et
@@ -294,7 +297,7 @@ function Question() {
                     />
                   </svg>
                 </div>
-                <div className={`question__faq-content-left-item-title-child`}>
+                <div className={`question__faq-content-left-item-title-child ${!checkFAQs.three ? "hidden" : "showed"}`}>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit sed
                     sol iusmod tempor incididunt ut labore et dolore magna et
@@ -341,7 +344,7 @@ function Question() {
                     />
                   </svg>
                 </div>
-                <div className={`question__faq-content-left-item-title-child`}>
+                <div className={`question__faq-content-left-item-title-child ${!checkFAQs.four ? "hidden" : "showed"}`}>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit sed
                     sol iusmod tempor incididunt ut labore et dolore magna et
@@ -390,7 +393,7 @@ function Question() {
                     />
                   </svg>
                 </div>
-                <div className={`question__faq-content-left-item-title-child`}>
+                <div className={`question__faq-content-left-item-title-child ${!checkFAQs.five ? "hidden" : "showed"}`}>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit sed
                     sol iusmod tempor incididunt ut labore et dolore magna et
@@ -438,7 +441,7 @@ function Question() {
                     />
                   </svg>
                 </div>
-                <div className={`question__faq-content-left-item-title-child`}>
+                <div className={`question__faq-content-left-item-title-child ${!checkFAQs.six ? "hidden" : "showed"}`}>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit sed
                     sol iusmod tempor incididunt ut labore et dolore magna et
@@ -486,7 +489,7 @@ function Question() {
                     />
                   </svg>
                 </div>
-                <div className={`question__faq-content-left-item-title-child`}>
+                <div className={`question__faq-content-left-item-title-child ${!checkFAQs.seven ? "hidden" : "showed"}`}>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit sed
                     sol iusmod tempor incididunt ut labore et dolore magna et
@@ -499,7 +502,7 @@ function Question() {
                 <div className="question__faq-content-left-item-title">
                   <span>4 How To Buy A Plan?</span>
                   <svg
-                    onClick={() => handleCheckFAQs(1)}
+                    onClick={() => handleCheckFAQs(8)}
                     className={checkFAQs.eight ? "hide" : "show"}
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -534,7 +537,7 @@ function Question() {
                     />
                   </svg>
                 </div>
-                <div className={`question__faq-content-left-item-title-child`}>
+                <div className={`question__faq-content-left-item-title-child ${!checkFAQs.eight ? "hidden" : "showed"}`}>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit sed
                     sol iusmod tempor incididunt ut labore et dolore magna et

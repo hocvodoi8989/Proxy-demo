@@ -1,0 +1,130 @@
+.map {
+    height: 619px;
+  
+    &__head {
+      text-align: center;
+  
+      h1 {
+        color: $textColor1;
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 48px;
+      }
+  
+      p {
+        color: $textColor2;
+        margin-top: 15px;
+        font-size: 15px;
+        font-weight: 400;
+      }
+    }
+  
+    &__wrap {
+      margin-top: 40px;
+      padding-bottom: 35px;
+  
+      &-flag1 {
+        display: flex;
+        padding: 0px 120px;
+        justify-content: space-between;
+        margin-top: 9.42px;
+      }
+  
+      &-info1 {
+        display: flex;
+        padding: 0px 105px;
+        justify-content: space-between;
+        margin-top: 25px;
+  
+        &-item {
+          width: 120px;
+          height: 50px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+  
+          p {
+            color: #121f3e;
+            font-size: 15px;
+            font-weight: 400;
+          }
+  
+          div {
+            color: #121f3e;
+            font-size: 17px;
+            font-weight: 500;
+          }
+        }
+      }
+  
+      &-flag2 {
+        display: flex;
+        padding: 0px 120px;
+        justify-content: space-between;
+        margin-top: 40px;
+      }
+  
+      &-info2 {
+        display: flex;
+        padding: 0px 105px;
+        justify-content: space-between;
+        margin-top: 25px;
+  
+        &-item {
+          width: 120px;
+          height: 50px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+  
+          p {
+            color: #121f3e;
+            font-size: 15px;
+            font-weight: 400;
+          }
+  
+          div {
+            color: #121f3e;
+            font-size: 17px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  
+    &__btn {
+      width: 190px;
+      height: 50px;
+      border-radius: 8px;
+      border: 1px solid var(--secondary-1, #112446);
+      background-color: $whiteColor;
+      margin-top: 40px;
+  
+      &-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+  
+        span {
+          color: $textColor1;
+          font-size: 15px;
+          font-weight: 500;
+          margin-right: 10px;
+        }
+
+        svg {
+          color: $textColor1;
+        }
+      }
+    }
+
+    &__btn:hover {
+      background-color: $textColor1;
+
+      span, svg {
+        color: $whiteColor;
+      }
+    }
+  }

@@ -713,7 +713,7 @@ function Pricing() {
             </div>
           </div>
           <div className="pricing__table-option">
-            <div className="pricing__table-option-item">
+            <div className={`pricing__table-option-item ${check1 ? "border" : ""}`}>
               <div className="pricing__table-option-item-price">
                 <div className="pricing__table-option-item-price-wrap">
                   <FontAwesomeIcon

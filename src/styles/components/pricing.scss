@@ -262,6 +262,10 @@
               }
             }
 
+            button:hover {
+              background-color: $primaryColor;
+            }
+
             .disable-btn {
               background-color: rgba(17, 36, 70, 0.25);
             }
@@ -299,6 +303,8 @@
         background-color: #f2f4f6;
         border-radius: 8px;
         display: flex;
+
+
 
         &-price {
           display: flex;
@@ -606,9 +612,9 @@
   // display: none;
 }
 
-// .disable {
-//   color: $textColor2;
-// }
+.border {
+  border: 2px solid #267eec !important;
+}
 
 .hide {
   display: none;

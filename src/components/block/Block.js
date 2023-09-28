@@ -1,5 +1,7 @@
 
 
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -98,40 +100,10 @@ function Block() {
                       className="block__proxy-top-content-btn-black-link"
                     >
                       <span>Learn More</span>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="13"
-                        height="12"
-                        viewBox="0 0 13 12"
-                        fill="none"
-                      >
-                        <path
-                          d="M9.83358 5.53176L4.49343 0.191706C4.36992 0.068097 4.20504 0 4.02924 0C3.85343 0 3.68856 0.068097 3.56504 0.191706L3.17178 0.584873C2.91588 0.841066 2.91588 1.25745 3.17178 1.51326L7.65604 5.99751L3.1668 10.4867C3.04329 10.6104 2.9751 10.7751 2.9751 10.9508C2.9751 11.1267 3.04329 11.2915 3.1668 11.4152L3.56007 11.8083C3.68368 11.9319 3.84846 12 4.02426 12C4.20006 12 4.36494 11.9319 4.48845 11.8083L9.83358 6.46336C9.95738 6.33936 10.0254 6.1738 10.025 5.99781C10.0254 5.82112 9.95738 5.65566 9.83358 5.53176Z"
-                          fill="white"
-                        />
-                      </svg>
+                      <FontAwesomeIcon icon={faChevronRight} className="block__proxy-top-content-btn-black-icon" />
                     </Link>
                   </button>
-                  <button className="block__proxy-top-content-btn-white">
-                    <Link
-                      href="#"
-                      className="block__proxy-top-content-btn-white-link"
-                    >
-                      <span>Learn More</span>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="13"
-                        height="12"
-                        viewBox="0 0 13 12"
-                        fill="none"
-                      >
-                        <path
-                          d="M9.83358 5.53176L4.49343 0.191706C4.36992 0.068097 4.20504 0 4.02924 0C3.85343 0 3.68856 0.068097 3.56504 0.191706L3.17178 0.584873C2.91588 0.841066 2.91588 1.25745 3.17178 1.51326L7.65604 5.99751L3.1668 10.4867C3.04329 10.6104 2.9751 10.7751 2.9751 10.9508C2.9751 11.1267 3.04329 11.2915 3.1668 11.4152L3.56007 11.8083C3.68368 11.9319 3.84846 12 4.02426 12C4.20006 12 4.36494 11.9319 4.48845 11.8083L9.83358 6.46336C9.95738 6.33936 10.0254 6.1738 10.025 5.99781C10.0254 5.82112 9.95738 5.65566 9.83358 5.53176Z"
-                          fill="#112446"
-                        />
-                      </svg>
-                    </Link>
-                  </button>
+                  
                 </div>
               </div>
             </div>
@@ -170,18 +142,7 @@ function Block() {
                 <button className="block__proxy-bot-content-btn">
                   <Link href="#" className="block__proxy-bot-content-btn-link">
                     <span>Learn More</span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="13"
-                      height="12"
-                      viewBox="0 0 13 12"
-                      fill="none"
-                    >
-                      <path
-                        d="M9.83358 5.53176L4.49343 0.191706C4.36992 0.068097 4.20504 0 4.02924 0C3.85343 0 3.68856 0.068097 3.56504 0.191706L3.17178 0.584873C2.91588 0.841066 2.91588 1.25745 3.17178 1.51326L7.65604 5.99751L3.1668 10.4867C3.04329 10.6104 2.9751 10.7751 2.9751 10.9508C2.9751 11.1267 3.04329 11.2915 3.1668 11.4152L3.56007 11.8083C3.68368 11.9319 3.84846 12 4.02426 12C4.20006 12 4.36494 11.9319 4.48845 11.8083L9.83358 6.46336C9.95738 6.33936 10.0254 6.1738 10.025 5.99781C10.0254 5.82112 9.95738 5.65566 9.83358 5.53176Z"
-                        fill="white"
-                      />
-                    </svg>
+                    <FontAwesomeIcon icon={faChevronRight} />
                   </Link>
                 </button>
               </div>

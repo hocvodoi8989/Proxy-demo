@@ -40,7 +40,6 @@
   }
 
   &__menu {
-    
     width: 100%;
     height: 70px;
     font-size: 15px;
@@ -56,7 +55,7 @@
 
     &-action {
       width: 757px;
-      height: 19px;
+      height: 100%;
       display: flex;
       flex-direction: row;
       justify-content: space-evenly;
@@ -67,36 +66,90 @@
         display: flex;
         align-items: center;
         cursor: pointer;
+        height: 100%;
 
-        svg {
+        &-icon {
+          font-size: 10px;
           margin-left: 6px;
         }
+      }
+
+      &-pricing:hover {
+        color: $primaryColor;
       }
 
       &-proxys {
         display: flex;
         align-items: center;
         cursor: pointer;
+        height: 100%;
 
-        svg {
+        &-icon {
+          font-size: 10px;
           margin-left: 6px;
         }
+      }
 
+      &-proxys:hover {
+        color: $primaryColor;
       }
 
       &-locations {
         display: flex;
         align-items: center;
         cursor: pointer;
+        height: 100%;
 
-        svg {
+        &-icon {
+          font-size: 10px;
           margin-left: 6px;
+        }
+      }
+
+      &-locations:hover {
+        color: $primaryColor;
+      }
+
+      &-resources {
+        display: flex;
+        align-items: center;
+        height: 100%;
+      }
+
+      &-resources:hover {
+        a {
+          color: $primaryColor;
+        }
+      }
+
+      &-blogs {
+        display: flex;
+        align-items: center;
+        height: 100%;
+      }
+
+      &-blogs:hover {
+        a {
+          color: $primaryColor;
+        }
+      }
+
+      &-flatforms {
+        display: flex;
+        align-items: center;
+        height: 100%;
+      }
+
+      &-flatforms:hover {
+        a {
+          color: $primaryColor;
         }
       }
 
       &-item {
         display: flex;
-        align-items: center;background-color: red;
+        align-items: center;
+        background-color: red;
       }
 
       &-icon {
@@ -142,21 +195,18 @@
       }
 
       &-resources {
-
         a {
           color: $textColor1;
         }
       }
 
       &-blogs {
-
         a {
           color: $textColor1;
         }
       }
 
       &-flatforms {
-
         a {
           color: $textColor1;
         }
@@ -173,18 +223,34 @@
 
         a {
           color: $textColor1;
+          font-weight: 600;
+          line-height: 19px;
         }
       }
 
-      &-signup {
+      &-login:hover {
+        a {
+          color: $primaryColor;
+        }
+      }
+
+      button {
         width: 100px;
         height: 40px;
-        font-weight: 500;
         padding: 10px;
-        color: $whiteColor;
         border-radius: 8px;
         border: none;
         background-color: $textColor1;
+
+        a {
+          font-size: 15px;
+          font-weight: 500;
+          color: $whiteColor;
+        }
+      }
+
+      button:hover {
+        background-color: $primaryColor;
       }
     }
   }
