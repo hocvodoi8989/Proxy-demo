@@ -48,7 +48,7 @@ function Footer() {
                     </defs>
                   </svg>
                 </Link>
-                <Link href="#" className="footer__proxy-info-wrap-social-twitter">
+                <Link href="#" className="footer__proxy-info-wrap-social-twitter" style={{ margin: "0 15px" }}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="30"
@@ -140,12 +140,12 @@ function Footer() {
                   <span>MacOS</span>
                 </Link>
               </button>
-              <button className="footer__proxy-wrap-dowload-btns-btn3">
+              {/* <button className="footer__proxy-wrap-dowload-btns-btn3">
                 <Link href="#" className="footer__proxy-wrap-dowload-btns-btn3-link">
                   <FontAwesomeIcon icon={faLinux} className="footer__proxy-wrap-dowload-btns-btn3-link-icon" />
                   <span>Linux</span>
                 </Link>
-              </button>
+              </button> */}
             </div>
             
           </div>

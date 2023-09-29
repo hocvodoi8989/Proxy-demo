@@ -158,6 +158,17 @@ function Question() {
             <div className="question__feedback-wrap-under1"></div>
             <div className="question__feedback-wrap-under2"></div>
           </div>
+          <div className="question__feedback-customer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <circle cx="6" cy="6" r="6" fill="#DCDCDC"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <circle cx="6" cy="6" r="6" fill="#DCDCDC"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <circle cx="6" cy="6" r="6" fill="#DCDCDC"/>
+            </svg>
+          </div>
         </div>
         <div className="question__faq">
           <h1 className="question__faq-head">Solve your usage problems</h1>
@@ -354,8 +365,8 @@ function Question() {
               </div>
             </div>
             <div className="question__faq-content-right">
-              <div className="question__faq-content-left-item">
-                <div className="question__faq-content-left-item-title">
+              <div className="question__faq-content-right-item">
+                <div className="question__faq-content-right-item-title">
                   <span>Can I integrate proxies with 3rd party software?</span>
                   <svg
                     onClick={() => handleCheckFAQs(5)}
@@ -393,7 +404,7 @@ function Question() {
                     />
                   </svg>
                 </div>
-                <div className={`question__faq-content-left-item-title-child ${!checkFAQs.five ? "hidden" : "showed"}`}>
+                <div className={`question__faq-content-right-item-title-child ${!checkFAQs.five ? "hidden" : "showed"}`}>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit sed
                     sol iusmod tempor incididunt ut labore et dolore magna et
@@ -402,8 +413,8 @@ function Question() {
                 </div>
               </div>
 
-              <div className="question__faq-content-left-item">
-                <div className="question__faq-content-left-item-title">
+              <div className="question__faq-content-right-item">
+                <div className="question__faq-content-right-item-title">
                   <span>3 Where can I use residential IP addresses?</span>
                   <svg
                     onClick={() => handleCheckFAQs(6)}
@@ -441,7 +452,7 @@ function Question() {
                     />
                   </svg>
                 </div>
-                <div className={`question__faq-content-left-item-title-child ${!checkFAQs.six ? "hidden" : "showed"}`}>
+                <div className={`question__faq-content-right-item-title-child ${!checkFAQs.six ? "hidden" : "showed"}`}>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit sed
                     sol iusmod tempor incididunt ut labore et dolore magna et
@@ -450,8 +461,8 @@ function Question() {
                 </div>
               </div>
 
-              <div className="question__faq-content-left-item">
-                <div className="question__faq-content-left-item-title">
+              <div className="question__faq-content-right-item">
+                <div className="question__faq-content-right-item-title">
                   <span>Are your proxies anonymous?</span>
                   <svg
                     onClick={() => handleCheckFAQs(7)}
@@ -489,7 +500,7 @@ function Question() {
                     />
                   </svg>
                 </div>
-                <div className={`question__faq-content-left-item-title-child ${!checkFAQs.seven ? "hidden" : "showed"}`}>
+                <div className={`question__faq-content-right-item-title-child ${!checkFAQs.seven ? "hidden" : "showed"}`}>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit sed
                     sol iusmod tempor incididunt ut labore et dolore magna et
@@ -498,8 +509,8 @@ function Question() {
                 </div>
               </div>
 
-              <div className="question__faq-content-left-item">
-                <div className="question__faq-content-left-item-title">
+              <div className="question__faq-content-right-item">
+                <div className="question__faq-content-right-item-title">
                   <span>4 How To Buy A Plan?</span>
                   <svg
                     onClick={() => handleCheckFAQs(8)}
@@ -537,7 +548,7 @@ function Question() {
                     />
                   </svg>
                 </div>
-                <div className={`question__faq-content-left-item-title-child ${!checkFAQs.eight ? "hidden" : "showed"}`}>
+                <div className={`question__faq-content-right-item-title-child ${!checkFAQs.eight ? "hidden" : "showed"}`}>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit sed
                     sol iusmod tempor incididunt ut labore et dolore magna et
