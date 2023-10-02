@@ -4,7 +4,7 @@ function Need() {
     return ( 
         <section className="need">
         <div className="wrapper">
-          <h1 className="need__header">Perfect for all your needs - 9Proxy</h1>
+          <h1 className="need__head">Perfect for all your needs - 9Proxy</h1>
           <div className="need__list">
             <div className="need__list-item">
               <svg

@@ -367,6 +367,153 @@ function Pricing() {
                     </span>
                   </li>
                 </ul>
+
+                <ul className={tag2 ? "show" : "hide"}>
+                  <li>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="13"
+                      height="12"
+                      viewBox="0 0 13 12"
+                      fill="none"
+                    >
+                      <g clipPath="url(#clip0_3023_5098)">
+                        <path
+                          d="M11.7983 1.96136C11.427 1.58959 10.8241 1.58982 10.4524 1.96136L4.39459 8.01936L1.70218 5.32697C1.3304 4.95519 0.727757 4.95519 0.355981 5.32697C-0.0157957 5.69874 -0.0157957 6.30139 0.355981 6.67316L3.72135 10.0385C3.90712 10.2243 4.15072 10.3174 4.39433 10.3174C4.63795 10.3174 4.88178 10.2245 5.06755 10.0385L11.7983 3.30753C12.1701 2.93602 12.1701 2.33311 11.7983 1.96136Z"
+                          fill="#112446"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_3023_5098">
+                          <rect
+                            width="12"
+                            height="12"
+                            fill="white"
+                            transform="translate(0.0771484)"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <span>
+                    High anonymity with unlimited bandwidth and connections
+                    </span>
+                  </li>
+                  <li>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="13"
+                      height="12"
+                      viewBox="0 0 13 12"
+                      fill="none"
+                    >
+                      <g clipPath="url(#clip0_3023_5098)">
+                        <path
+                          d="M11.7983 1.96136C11.427 1.58959 10.8241 1.58982 10.4524 1.96136L4.39459 8.01936L1.70218 5.32697C1.3304 4.95519 0.727757 4.95519 0.355981 5.32697C-0.0157957 5.69874 -0.0157957 6.30139 0.355981 6.67316L3.72135 10.0385C3.90712 10.2243 4.15072 10.3174 4.39433 10.3174C4.63795 10.3174 4.88178 10.2245 5.06755 10.0385L11.7983 3.30753C12.1701 2.93602 12.1701 2.33311 11.7983 1.96136Z"
+                          fill="#112446"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_3023_5098">
+                          <rect
+                            width="12"
+                            height="12"
+                            fill="white"
+                            transform="translate(0.0771484)"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <span>
+                    Unmatched speed, high uptime, and 24/7 availability
+                    </span>
+                  </li>
+                  <li>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="13"
+                      height="12"
+                      viewBox="0 0 13 12"
+                      fill="none"
+                    >
+                      <g clipPath="url(#clip0_3023_5098)">
+                        <path
+                          d="M11.7983 1.96136C11.427 1.58959 10.8241 1.58982 10.4524 1.96136L4.39459 8.01936L1.70218 5.32697C1.3304 4.95519 0.727757 4.95519 0.355981 5.32697C-0.0157957 5.69874 -0.0157957 6.30139 0.355981 6.67316L3.72135 10.0385C3.90712 10.2243 4.15072 10.3174 4.39433 10.3174C4.63795 10.3174 4.88178 10.2245 5.06755 10.0385L11.7983 3.30753C12.1701 2.93602 12.1701 2.33311 11.7983 1.96136Z"
+                          fill="#112446"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_3023_5098">
+                          <rect
+                            width="12"
+                            height="12"
+                            fill="white"
+                            transform="translate(0.0771484)"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <span>
+                    Bypass anti-scraping measures and avoid getting your IP blocked
+                    </span>
+                  </li>
+                  <li>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="13"
+                      height="12"
+                      viewBox="0 0 13 12"
+                      fill="none"
+                    >
+                      <g clipPath="url(#clip0_3023_5098)">
+                        <path
+                          d="M11.7983 1.96136C11.427 1.58959 10.8241 1.58982 10.4524 1.96136L4.39459 8.01936L1.70218 5.32697C1.3304 4.95519 0.727757 4.95519 0.355981 5.32697C-0.0157957 5.69874 -0.0157957 6.30139 0.355981 6.67316L3.72135 10.0385C3.90712 10.2243 4.15072 10.3174 4.39433 10.3174C4.63795 10.3174 4.88178 10.2245 5.06755 10.0385L11.7983 3.30753C12.1701 2.93602 12.1701 2.33311 11.7983 1.96136Z"
+                          fill="#112446"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_3023_5098">
+                          <rect
+                            width="12"
+                            height="12"
+                            fill="white"
+                            transform="translate(0.0771484)"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <span>
+                    Support fingerprint browser, emulator, and other scenarios.
+                    </span>
+                  </li>
+                  <li>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="13"
+                      height="12"
+                      viewBox="0 0 13 12"
+                      fill="none"
+                    >
+                      <g clipPath="url(#clip0_3023_5098)">
+                        <path
+                          d="M11.7983 1.96136C11.427 1.58959 10.8241 1.58982 10.4524 1.96136L4.39459 8.01936L1.70218 5.32697C1.3304 4.95519 0.727757 4.95519 0.355981 5.32697C-0.0157957 5.69874 -0.0157957 6.30139 0.355981 6.67316L3.72135 10.0385C3.90712 10.2243 4.15072 10.3174 4.39433 10.3174C4.63795 10.3174 4.88178 10.2245 5.06755 10.0385L11.7983 3.30753C12.1701 2.93602 12.1701 2.33311 11.7983 1.96136Z"
+                          fill="#112446"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_3023_5098">
+                          <rect
+                            width="12"
+                            height="12"
+                            fill="white"
+                            transform="translate(0.0771484)"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <span>High anonymity SOCKS5 and HTTP(S) support</span>
+                  </li>
+                  
+                </ul>
               </div>
             </div>
             <div className="pricing__table-interest-pay">
@@ -761,7 +908,7 @@ function Pricing() {
                 </div>
               </div>
             </div>
-            <div className="pricing__table-option-item">
+            <div className={`pricing__table-option-item ${check2 ? "border" : ""}`}>
               <div className="pricing__table-option-item-price">
                 <div className="pricing__table-option-item-price-wrap">
                   <FontAwesomeIcon
@@ -809,8 +956,8 @@ function Pricing() {
                 </div>
               </div>
             </div>
-            <div className="pricing__table-option-special">
-              <div className="pricing__table-option-special-price">
+            <div className={`pricing__table-option-special ${check3 ? "bg-special" : ""}`}>
+              <div className={`pricing__table-option-special-price ${check3 ? "bg-special-child" : ""}`}>
                 <div className="pricing__table-option-special-price-wrap">
                   <FontAwesomeIcon
                     onClick={option3}
@@ -900,7 +1047,7 @@ function Pricing() {
                 </svg>
               </div>
             </div>
-            <div className="pricing__table-option-item">
+            <div className={`pricing__table-option-item ${check4 ? "border" : ""}`}>
               <div className="pricing__table-option-item-price">
                 <div className="pricing__table-option-item-price-wrap">
                   <FontAwesomeIcon
@@ -948,7 +1095,7 @@ function Pricing() {
                 </div>
               </div>
             </div>
-            <div className="pricing__table-option-item">
+            <div className={`pricing__table-option-item ${check5 ? "border" : ""}`}>
               <div className="pricing__table-option-item-price">
                 <div className="pricing__table-option-item-price-wrap">
                   <FontAwesomeIcon

@@ -296,6 +296,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      border: 2px solid transparent;
 
       &-item {
         height: 110px;
@@ -303,7 +304,7 @@
         background-color: #f2f4f6;
         border-radius: 8px;
         display: flex;
-
+        border: 2px solid transparent;
 
 
         &-price {
@@ -558,6 +559,14 @@
         }
       }
 
+      .bg-special {
+        background-color: #076be6!important;
+      }
+      
+      .bg-special-child {
+        background-color: #2780f0!important;
+      }
+
       &-mount {
         position: absolute;
         top: calc(40% - 1px);
@@ -610,6 +619,7 @@
         position: relative;
 
         &-wrap {
+          display: none;
           position: relative;
           z-index: 10;
           bottom: 0px;
@@ -747,6 +757,7 @@
         }
 
         &-behind {
+          display: none;
           position: absolute;
           width: 480px;
           height: 234px;
