@@ -3,6 +3,7 @@
 import { useState } from "react";
 
 function Question() {
+  
   const objectFAQs = {
     one: false,
     two: false,
@@ -50,8 +51,7 @@ function Question() {
     }
   };
 
-  if (checkFAQs.one) {
-  }
+  
 
   return (
     <section className="question">

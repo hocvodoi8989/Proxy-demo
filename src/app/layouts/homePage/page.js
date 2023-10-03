@@ -1,3 +1,7 @@
+
+
+import WrapperHeader from "@/components/wrapperHeader/WrapperHeader";
+import Header from "@/components/header/Header";
 import Banner from "@/components/banner/Banner";
 import Block from "@/components/block/Block";
 import Need from "@/components/need/Need";
@@ -11,7 +15,7 @@ function HomePage() {
 
   return (
     <main>
-      <Banner />
+      <WrapperHeader />
       <Block />
       <Need />
       <Maping />

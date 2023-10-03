@@ -1,19 +1,10 @@
 .banner {
     width: 100%;
-    height: 963px;
-    background: var(
-      --Linear,
-      linear-gradient(
-        180deg,
-        rgba(219, 228, 254, 0.35) 0%,
-        rgba(219, 228, 254, 0) 73.44%,
-        rgba(255, 255, 255, 0) 100%
-      )
-    );
+    
   
     &__services {
       display: flex;
-      margin-top: 72px;
+      padding-top: 72px;
   
       &-text {
         width: 630px;

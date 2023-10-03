@@ -10,7 +10,8 @@ import { faAngleDown, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 function Header() {
   return (
     <div className="header">
-      <div className="header__top">
+      <div className="wrapper">
+        <div className="header__top">
         <div className="header__top-social">
           <Link href="#">
             <Image
@@ -47,7 +48,7 @@ function Header() {
           </svg>
         </div>
       </div>
-      <div className="header__menu">
+        <div className="header__menu">
         <Link href="#">
           <Image
             className="header__menu-logo"
@@ -167,6 +168,7 @@ function Header() {
             <button className="header__menu-account-signup">Sign Up</button>
           </Link> */}
         </div>
+      </div>
       </div>
     </div>
   );

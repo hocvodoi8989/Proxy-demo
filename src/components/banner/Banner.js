@@ -1,13 +1,11 @@
 
 
 import Link from "next/link";
-import Header from "../header/Header";
 
 function Banner() {
     return ( 
         <section className="banner">
         <div className="wrapper">
-          <Header />
           <div className="banner__services">
             <div className="banner__services-text">
               <div className="banner__services-text-content">
