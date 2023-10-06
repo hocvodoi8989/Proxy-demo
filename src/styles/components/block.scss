@@ -18,7 +18,7 @@
         }
   
         &-content {
-          width: 690px;
+          max-width: 690px;
   
           &-title {
             font-size: 40px;
@@ -36,7 +36,7 @@
   
           &-option {
             margin-top: 40px;
-            height: 164px;
+            max-height: 164px;
             display: flex;
             justify-content: space-between;
   
@@ -133,7 +133,8 @@
         gap: 30px;
   
         &-content {
-          
+          max-width: 690px;
+
           h1 {
             font-size: 40px;
             font-weight: 600;
@@ -173,6 +174,8 @@
             }
           }
   
+          
+          
           .hidden {
             height: 0;
             overflow: hidden;
@@ -229,6 +232,16 @@
             span, svg {
               color: $textColor1;
             }
+          }
+        }
+
+        &-image {
+          max-width: 690px;
+          min-width: 350px;
+
+          &-1, &-2, &-3, &-4 {
+            width: 100%;
+            height: 100%;
           }
         }
       }

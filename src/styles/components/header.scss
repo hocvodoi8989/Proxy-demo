@@ -1,6 +1,13 @@
 .header {
   width: 100%;
 
+  &-wrapper {
+    width: 100%;
+    max-width: 1470px;
+    padding: 0 30px;
+    margin: 0 auto;
+  }
+
   &__top {
     height: 58px;
     display: flex;
@@ -251,6 +258,14 @@
 
       button:hover {
         background-color: $primaryColor;
+      }
+    }
+
+    &-icon {
+      display: none;
+
+      svg {
+        cursor: pointer;
       }
     }
   }

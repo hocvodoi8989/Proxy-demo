@@ -219,14 +219,41 @@ function Block() {
                 </Link>
               </button>
             </div>
-            <Image
-              className="block__proxy-bot-image"
-              src="/assets/images/people-image.webp"
-              alt="people"
-              width={690}
-              height={470}
-              quality={100}
-            />
+            <div className="block__proxy-bot-image">
+              <Image
+                className={`block__proxy-bot-image-1 ${checkFreedom.one ? "show" : "hide"}`}
+                src="/assets/images/people-image.webp"
+                alt="people"
+                width={690}
+                height={470}
+                quality={100}
+              />
+
+              <Image
+                className={`block__proxy-bot-image-2 ${checkFreedom.two ? "show" : "hide"}`}
+                src="/assets/images/block-1.webp"
+                alt="people"
+                width={690}
+                height={470}
+                quality={100}
+              />
+              <Image
+                className={`block__proxy-bot-image-3 ${checkFreedom.three ? "show" : "hide"}`}
+                src="/assets/images/block-2.webp"
+                alt="people"
+                width={690}
+                height={470}
+                quality={100}
+              />
+              <Image
+                className={`block__proxy-bot-image-4 ${checkFreedom.four ? "show" : "hide"}`}
+                src="/assets/images/block-3.webp"
+                alt="people"
+                width={690}
+                height={470}
+                quality={100}
+              />
+            </div>
           </div>
         </div>
       </div>
