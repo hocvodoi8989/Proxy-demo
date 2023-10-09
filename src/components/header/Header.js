@@ -11,10 +11,19 @@ import { useState } from "react";
 function Header() {
   const [checkMenu, setCheckMenu] = useState(true);
 
+  const [checkApp, setCheckApp] = useState(false)
+
   const handleCheckMenu = () => {
     setCheckMenu(!checkMenu);
   };
 
+  const handleCheckApp = () => {
+    setCheckApp(!checkApp)
+  }
+
+  
+
+  
   return (
     <div className="header">
       <div className="header-wrapper">
@@ -247,8 +256,8 @@ function Header() {
             </svg>
           </div>
         </div>
-      
-        <div className="header__responsive">
+
+        <div style={checkMenu ? {height: "0"} : {height: "calc(100vh - 70px)"}} className="header__responsive">
           <div className="header__responsive-content">
             <div className="header__responsive-content-box">
               <nav className="header__responsive-content-box-menu">
@@ -258,31 +267,67 @@ function Header() {
                   </li>
                   <li>
                     <div className="header__responsive-content-box-menu-link">
-                      <div>
-                        9Proxy App 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="9" height="5" viewBox="0 0 9 5" fill="none">
-                          <path d="M4.37531 4.99999C4.2931 5.00046 4.2116 4.98471 4.13549 4.95362C4.05938 4.92253 3.99016 4.87673 3.93179 4.81883L0.183713 1.07076C0.0660836 0.953128 0 0.793588 0 0.627235C0 0.460882 0.0660836 0.301342 0.183713 0.183713C0.301342 0.0660836 0.460882 0 0.627235 0C0.793588 0 0.953128 0.0660836 1.07076 0.183713L4.37531 3.49451L7.67986 0.18996C7.79937 0.087621 7.95308 0.0341443 8.1103 0.040217C8.26752 0.0462896 8.41665 0.111464 8.5279 0.222716C8.63916 0.333968 8.70433 0.483103 8.7104 0.64032C8.71647 0.797537 8.663 0.951255 8.56066 1.07076L4.81259 4.81883C4.69623 4.93424 4.53919 4.9993 4.37531 4.99999Z" fill="#112446"/>
+                      <div 
+                          onClick={() => handleCheckApp()} className="header__responsive-content-box-menu-link-wrap">
+                        9Proxy App
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="9"
+                          height="5"
+                          viewBox="0 0 9 5"
+                          fill="none"
+                        >
+                          <path
+                            d="M4.37531 4.99999C4.2931 5.00046 4.2116 4.98471 4.13549 4.95362C4.05938 4.92253 3.99016 4.87673 3.93179 4.81883L0.183713 1.07076C0.0660836 0.953128 0 0.793588 0 0.627235C0 0.460882 0.0660836 0.301342 0.183713 0.183713C0.301342 0.0660836 0.460882 0 0.627235 0C0.793588 0 0.953128 0.0660836 1.07076 0.183713L4.37531 3.49451L7.67986 0.18996C7.79937 0.087621 7.95308 0.0341443 8.1103 0.040217C8.26752 0.0462896 8.41665 0.111464 8.5279 0.222716C8.63916 0.333968 8.70433 0.483103 8.7104 0.64032C8.71647 0.797537 8.663 0.951255 8.56066 1.07076L4.81259 4.81883C4.69623 4.93424 4.53919 4.9993 4.37531 4.99999Z"
+                            fill="#112446"
+                          />
                         </svg>
                       </div>
 
-                      <div className="header__responsive-content-box-menu-link-child">
+                      <div style={checkApp ? {height: "84px"} : {height: 0}} className="header__responsive-content-box-menu-link-child">
                         <div>
                           <Link href="#">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19" fill="none">
-                              <path d="M19.7837 12.1166C19.7837 12.1335 19.7837 12.1482 19.7837 12.1641C19.3042 13.6163 18.6202 14.8609 17.7855 16.016C17.0236 17.0646 16.0899 18.4757 14.4226 18.4757C12.982 18.4757 12.025 17.5494 10.5486 17.5241C8.98671 17.4988 8.1278 18.2987 6.69979 18.5C6.53644 18.5 6.37309 18.5 6.2129 18.5C5.16429 18.3482 4.31802 17.5178 3.7015 16.7695C1.88356 14.5585 0.478739 11.7025 0.217377 8.0476C0.217377 7.68928 0.217377 7.33202 0.217377 6.9737C0.328034 4.35797 1.59901 2.23124 3.28838 1.20054C4.17996 0.652525 5.40563 0.185657 6.7704 0.394325C7.3553 0.484958 7.95285 0.685196 8.47663 0.883325C8.97301 1.07408 9.59374 1.41237 10.1818 1.39446C10.5802 1.38286 10.9764 1.17525 11.378 1.02876C12.5541 0.604047 13.707 0.117154 15.2267 0.345846C17.0531 0.621963 18.3494 1.43345 19.1503 2.68546C17.6053 3.66873 16.3839 5.15048 16.5926 7.68085C16.778 9.97936 18.1144 11.3241 19.7837 12.1166Z" fill="#112446"/>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="20"
+                              height="19"
+                              viewBox="0 0 20 19"
+                              fill="none"
+                            >
+                              <path
+                                d="M19.7837 12.1166C19.7837 12.1335 19.7837 12.1482 19.7837 12.1641C19.3042 13.6163 18.6202 14.8609 17.7855 16.016C17.0236 17.0646 16.0899 18.4757 14.4226 18.4757C12.982 18.4757 12.025 17.5494 10.5486 17.5241C8.98671 17.4988 8.1278 18.2987 6.69979 18.5C6.53644 18.5 6.37309 18.5 6.2129 18.5C5.16429 18.3482 4.31802 17.5178 3.7015 16.7695C1.88356 14.5585 0.478739 11.7025 0.217377 8.0476C0.217377 7.68928 0.217377 7.33202 0.217377 6.9737C0.328034 4.35797 1.59901 2.23124 3.28838 1.20054C4.17996 0.652525 5.40563 0.185657 6.7704 0.394325C7.3553 0.484958 7.95285 0.685196 8.47663 0.883325C8.97301 1.07408 9.59374 1.41237 10.1818 1.39446C10.5802 1.38286 10.9764 1.17525 11.378 1.02876C12.5541 0.604047 13.707 0.117154 15.2267 0.345846C17.0531 0.621963 18.3494 1.43345 19.1503 2.68546C17.6053 3.66873 16.3839 5.15048 16.5926 7.68085C16.778 9.97936 18.1144 11.3241 19.7837 12.1166Z"
+                                fill="#112446"
+                              />
                             </svg>
                             <span>MacOS</span>
                           </Link>
                           <Link href="#">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
-                              <path d="M0 4.25V11.75H10.5V2.9375L0 4.25Z" fill="#112446"/>
-                              <path d="M12 2.75V11.75H24V1.25L12 2.75Z" fill="#112446"/>
-                              <path d="M12 13.25V22.25L24 23.75V13.25H12Z" fill="#112446"/>
-                              <path d="M0 13.25V20.75L10.5 22.0625V13.25H0Z" fill="#112446"/>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="25"
+                              viewBox="0 0 24 25"
+                              fill="none"
+                            >
+                              <path
+                                d="M0 4.25V11.75H10.5V2.9375L0 4.25Z"
+                                fill="#112446"
+                              />
+                              <path
+                                d="M12 2.75V11.75H24V1.25L12 2.75Z"
+                                fill="#112446"
+                              />
+                              <path
+                                d="M12 13.25V22.25L24 23.75V13.25H12Z"
+                                fill="#112446"
+                              />
+                              <path
+                                d="M0 13.25V20.75L10.5 22.0625V13.25H0Z"
+                                fill="#112446"
+                              />
                             </svg>
                             <span>Window</span>
                           </Link>
-                            
                         </div>
                       </div>
                     </div>
@@ -299,10 +344,17 @@ function Header() {
                 </ul>
               </nav>
             </div>
+
+            <div className="header__responsive-content-auth">
+              <Link className="header__responsive-content-auth-signin" href="#">
+                Sign In
+              </Link>
+              <Link className="header__responsive-content-auth-signup" href="#">
+                Sign Up
+              </Link>
+            </div>
           </div>
-          <div className="header__responsive-bg">
-            
-          </div>
+          <div className="header__responsive-bg"></div>
         </div>
       </div>
     </div>

@@ -2,8 +2,8 @@
   width: 100%;
 
   &-wrapper {
-    width: 100%;
     max-width: 1470px;
+    width: 100%;
     padding: 0 30px;
     margin: 0 auto;
   }
@@ -266,6 +266,32 @@
 
       svg {
         cursor: pointer;
+      }
+    }
+  }
+
+  &__responsive {
+    display: none;
+
+    &-content {
+
+      &-box {
+
+        &-menu {
+
+          &-link {
+
+            &-wrap {
+
+            }
+
+            &-child {
+              // height: 132px;
+              margin: 10px 0px 0px;
+              transition: all 200ms ease-out 0s;
+            }
+          }
+        }
       }
     }
   }
