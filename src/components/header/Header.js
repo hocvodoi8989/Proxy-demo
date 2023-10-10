@@ -15,7 +15,13 @@ function Header() {
 
   const handleCheckMenu = () => {
     setCheckMenu(!checkMenu);
+    document.body.style.overflow = "hidden";
   };
+
+  const closeMenu = () => {
+    setCheckMenu(!checkMenu)
+    document.body.style.overflow = "auto";
+  }
 
   const handleCheckApp = () => {
     setCheckApp(!checkApp)
@@ -36,6 +42,7 @@ function Header() {
                 alt="facebook"
                 width={24}
                 height={24}
+                quality={100}
               />
             </Link>
             <Link href="#">
@@ -45,6 +52,7 @@ function Header() {
                 alt="twitter"
                 width={24}
                 height={24}
+                quality={100}
               />
             </Link>
             <Link href="#">
@@ -54,6 +62,7 @@ function Header() {
                 alt="telegram"
                 width={24}
                 height={24}
+                quality={100}
               />
             </Link>
           </div>
@@ -241,7 +250,7 @@ function Header() {
             </svg>
 
             <svg
-              onClick={() => handleCheckMenu()}
+              onClick={() => closeMenu()}
               className={!checkMenu ? "show" : "hide"}
               xmlns="http://www.w3.org/2000/svg"
               width="16"
