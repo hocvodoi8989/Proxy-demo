@@ -43,14 +43,15 @@ function Block() {
       <div className="wrapper">
         <div className="block__proxy">
           <div className="block__proxy-top">
-            <Image
-              className="block__proxy-top-image"
-              src="/assets/images/computer-image.webp"
-              alt="computer"
-              width={597}
-              height={505}
-              quality={100}
-            />
+            <div className="block__proxy-top-image">
+              <Image
+                src="/assets/images/computer-image.webp"
+                alt="computer"
+                width={597}
+                height={505}
+                quality={100}
+              />
+            </div>
             <div className="block__proxy-top-content">
               <h1 className="block__proxy-top-content-title">
                 {`Ultra-Fast & Reliable Residential Proxies Network At Scale`}
