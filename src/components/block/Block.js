@@ -1,12 +1,29 @@
 "use client";
 
-import { faChevronRight, faL } from "@fortawesome/free-solid-svg-icons";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import React from "react";
 
 function Block() {
+  
+  // const useViewport = () => {
+  //   const [width, setWidth] = React.useState(window.innerWidth);
+  
+  //   React.useEffect(() => {
+  //     const handleWindowResize = () => setWidth(window.innerWidth);
+  //     window.addEventListener("resize", handleWindowResize);
+  //     return () => window.removeEventListener("resize", handleWindowResize);
+  //   }, []);
+  
+  //   return { width };
+  // };
+
+  // const viewPort = useViewport()
+  // const viewPortWidth = viewPort.width
+  
   const objectFreedom = {
     one: true,
     two: false,
@@ -37,6 +54,8 @@ function Block() {
         setCheckFreedom({ ...objectFreedom });
     }
   };
+
+  
 
   return (
     <section className="block">
@@ -153,6 +172,7 @@ function Block() {
                     className={checkFreedom.one ? "color-freedom" : ""}
                   >{`Safe & Anonymous`}</h4>
                   <div
+                    // style={viewPortWidth >= 768 && viewPortWidth <= 1023 ? {height: "154px"} : ""}
                     className={`block__proxy-bot-content-list-item-text ${
                       checkFreedom.one ? "showed" : "hidden"
                     }`}

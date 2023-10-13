@@ -1,9 +1,10 @@
 .account {
+    height: 100vh;
     display: flex;
 
     &__welcome {
         width: 43%;
-        height: 1080px;
+        height: 100%;
         background-color: #123B6E;
         display: flex;
         justify-content: center;
