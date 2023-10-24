@@ -1,7 +1,17 @@
+"use client"
+
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
 
 function Login() {
+
+  const [tabActive, setTabActive] = useState(true)
+
+  const handleActive = () => {
+    setTabActive(!tabActive)
+  }
+
   return (
     <div className="login">
       <div className="login__wrap">
@@ -23,17 +33,20 @@ function Login() {
         </div>
         <div className="login__wrap-body">
           <div className="login__wrap-body-tab">
-            <div>Login</div>
-            <div>Signup</div>
+            
+              <span onClick={() => handleActive()}>Login</span>
+              <span onClick={() => handleActive()}>Signup</span>
+              <div className="login__wrap-body-tab-bg" style={ tabActive ? {left: "1%"} : {left: "49%"} }></div>
+            
           </div>
           <div className="login__wrap-body-form">
-            <div className="login__wrap-body-wrap-form">
+            <div className="login__wrap-body-form-wrap">
               <div className="login__wrap-body-form-wrap-name">
                 <div className="login__wrap-body-form-wrap-name-icon">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
-                    height="21"
+                    height="20"
                     viewBox="0 0 20 21"
                     fill="none"
                   >
@@ -43,7 +56,7 @@ function Login() {
                     />
                   </svg>
                 </div>
-                <input placeholder="Please enter an email address" />
+                <input name="email" type="email" placeholder="Please enter an email address" />
               </div>
               <div className="login__wrap-body-form-wrap-password">
                 <div className="login__wrap-body-form-wrap-password-icon">
@@ -64,7 +77,7 @@ function Login() {
                     />
                   </svg>
                 </div>
-                <input placeholder="Please enter your password" />
+                <input name="password" type="password" placeholder="Please enter your password" />
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -90,7 +103,7 @@ function Login() {
                   </defs>
                 </svg>
               </div>
-              <span>Forgot your password?</span>
+              <div className="login__wrap-body-form-wrap-forgot">Forgot your password?</div>
             </div>
 
             <button>Login</button>
