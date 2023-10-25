@@ -1,6 +1,21 @@
+"use client"
+
 import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
 
 export default function AccountLayout({ children }) {
+
+  const [tabActive, setTabActive] = useState(false);
+
+  const handleActiveLogin = () => {
+    setTabActive(false);
+  };
+
+  const handleActiveSignup = () => {
+    setTabActive(true);
+  };
+
   return (
     <div className="account">
       <div className="account__welcome">
@@ -109,7 +124,52 @@ export default function AccountLayout({ children }) {
           </div>
         </div>
       </div>
-      {children}
+
+      <div className="login">
+        <div className="login__wrap">
+          <div className="login__wrap-head">
+            <div className="login__wrap-head-logo">
+              <Link href="#">
+                <Image
+                  src="/assets/images/logo-login.webp"
+                  alt="logo"
+                  width={118}
+                  height={35}
+                  quality={100}
+                ></Image>
+              </Link>
+            </div>
+
+            <div className="login__wrap-head-text">
+              <h1>Welcome Back</h1>
+              <p>Start protecting yourself with 9Proxy</p>
+            </div>
+
+            <div className="login__wrap-head-tab">
+              <Link
+                href="/login"
+                onClick={() => handleActiveLogin()}
+                style={!tabActive ? { color: "#112446" } : {}}
+              >
+                Login
+              </Link>
+              <Link
+                href="/signup"
+                onClick={() => handleActiveSignup()}
+                style={tabActive ? { color: "#112446" } : {}}
+              >
+                Signup
+              </Link>
+              <div
+                className="login__wrap-head-tab-bg"
+                style={!tabActive ? { left: "1%" } : { left: "49%" }}
+              ></div>
+            </div>
+          </div>
+
+          {children}
+        </div>
+      </div>
     </div>
   );
 }
