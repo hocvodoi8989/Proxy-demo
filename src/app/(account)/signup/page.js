@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 function Signup() {
   const [checkShowPassword, setCheckShowPassword] = useState(false);
@@ -9,6 +9,8 @@ function Signup() {
   const [checkShowConfirm, setCheckShowConfirm] = useState(false);
 
   const [checkAgree, setCheckAgree] = useState(false);
+
+  const AgreeRef = useRef();
 
   const handleCheckShowPassword = () => {
     setCheckShowPassword(!checkShowPassword);
@@ -21,6 +23,16 @@ function Signup() {
   const handleAgree = () => {
     setCheckAgree(!checkAgree);
   };
+
+  const handleSignup = () => {
+    if (!checkAgree) {
+      AgreeRef.current.style.display = "flex";
+    }
+  };
+
+  const checked = () => {
+    AgreeRef.current.style.display = "none";
+  }
 
   return (
     <div className="signup__wrap-body">
@@ -220,10 +232,13 @@ function Signup() {
                 className="signup__wrap-body-form-wrap-conditions-check-switch"
               >
                 <span
-                  style={checkAgree ? {backgroundColor: "#267EEC"} : {}}
+                  style={checkAgree ? { backgroundColor: "#267EEC" } : {}}
                   className="signup__wrap-body-form-wrap-conditions-check-switch-slider"
+                  onClick={() => checked()}
                 >
-                    <div style={checkAgree ? {transform: "translateX(16px)"} : {}}></div>
+                  <div
+                    style={checkAgree ? { transform: "translateX(16px)" } : {}}
+                  ></div>
                 </span>
               </label>
               <div className="signup__wrap-body-form-wrap-conditions-check-text">
@@ -232,7 +247,10 @@ function Signup() {
               </div>
             </div>
 
-            <div className="signup__wrap-body-form-wrap-conditions-warning hide">
+            <div
+              ref={AgreeRef}
+              className={`signup__wrap-body-form-wrap-conditions-warning`}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -262,7 +280,7 @@ function Signup() {
           </div>
         </div>
 
-        <button>Sign up</button>
+        <button onClick={() => handleSignup()}>Sign up</button>
       </div>
 
       <div className="signup__wrap-body-or">

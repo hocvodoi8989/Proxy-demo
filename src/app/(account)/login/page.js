@@ -6,20 +6,20 @@ import { useState } from "react";
 function Login() {
   const [checkShowPassword, setCheckShowPassword] = useState(false);
 
-  const user = {
-    email: "",
-    password: "",
-  }
+  // const user = {
+  //   email: "",
+  //   password: "",
+  // }
 
-  const [infoUser, setInfoUser] = useState(user)
+  // const [infoUser, setInfoUser] = useState(user)
 
   const handleCheckShowPassword = () => {
     setCheckShowPassword(!checkShowPassword);
   };
 
-  const handleLogin = (e) => {
-    console.log(infoUser)
-  }
+  // const handleLogin = (e) => {
+  //   console.log(infoUser)
+  // }
 
   return (
     <div className="login__wrap-body">
@@ -41,7 +41,7 @@ function Login() {
               </svg>
             </div>
             <input
-              onChange={(e) => setInfoUser(e.target.value)}
+              // onChange={(e) => setInfoUser(e.target.value)}
               name="email"
               type="email"
               placeholder="Please enter an email address"
@@ -67,7 +67,7 @@ function Login() {
               </svg>
             </div>
             <input
-              onChange={(e) => setInfoUser(e.target.value)}
+              // onChange={(e) => setInfoUser(e.target.value)}
               name="password"
               type={checkShowPassword ? "text" : "password"}
               placeholder="Please enter your password"
@@ -135,7 +135,7 @@ function Login() {
           </div>
         </div>
 
-        <button onClick={() => handleLogin()}>Login</button>
+        <button>Login</button>
       </div>
 
       <div className="login__wrap-body-or">
